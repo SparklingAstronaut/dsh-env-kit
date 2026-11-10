@@ -83,8 +83,12 @@ function Test-Payload([string]$DshHome) {
     }
     $manifest = Read-Json (Join-Path $script:KitRoot 'manifest.json')
     $profile = Read-Json (Join-Path $DshHome 'profiles\desktop\package.json')
-    if (@($profile.dependencies.PSObject.Properties).Count -ne 13) { throw 'Unexpected plugin composition.' }
+    if (@($profile.dependencies.PSObject.Properties).Count -ne @($manifest.plugins).Count) { throw 'Unexpected plugin composition.' }
     foreach ($plugin in $manifest.plugins) {
-        if ($profile.dependencies.($plugin.name) -ne $plugin.version) { throw 'Plugin declaration drift.' }
+        $source = $plugin.PSObject.Properties['source']
+        $expected = if ($source) { $source.Value } else { $plugin.version }
+        if ($profile.dependencies.($plugin.name) -ne $expected) { throw 'Plugin declaration drift.' }
+        $installed = Read-Json (Join-Path $DshHome "profiles/desktop/node_modules/$($plugin.name)/package.json")
+        if ($installed.version -ne $plugin.version) { throw 'Installed plugin version drift.' }
     }
 }

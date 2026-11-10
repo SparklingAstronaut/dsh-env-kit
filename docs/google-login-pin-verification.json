@@ -1,0 +1,173 @@
+{
+  "kitVersion": "1.0.1",
+  "date": "2026-11-11",
+  "hostVersion": "0.2.2-rc.1",
+  "passed": true,
+  "plugins": 14,
+  "productionPackages": 188,
+  "filesChecked": 14141,
+  "secretAndPathFindings": 0,
+  "contractsPassed": 15,
+  "preservedOldPayloadFiles": 13256,
+  "modifiedOldPayloadFiles": [
+    "profiles/desktop/package.json"
+  ],
+  "pin": {
+    "name": "dsh-deepseek-chat",
+    "version": "0.2.22",
+    "source": "file:./pinned-packages/dsh-deepseek-chat-0.2.22-google-login-4ba6ade.tgz",
+    "sha256": "43f85e4105fc324f50932c40e916d4954aa599ae7c70f07b54de1578016dda6a",
+    "repository": "https://github.com/SparklingAstronaut/dsh-deepseek-chat",
+    "commit": "4ba6ade65efc851bd2607501956fd2836060596b",
+    "upstreamPullRequest": "https://github.com/xingxingbk-git/dsh-deepseek-chat/pull/18",
+    "updatePolicy": "manual-after-upstream-fix"
+  },
+  "installedPackageFilesMatched": 43,
+  "officialManager": {
+    "updatable": false,
+    "enabled": true,
+    "versionsStatus": "refused",
+    "problem": "not-updatable"
+  },
+  "activePluginModules": [
+    {
+      "name": "dsh-better-sidebar",
+      "entries": [
+        {
+          "enabled": true,
+          "phase": "active"
+        }
+      ]
+    },
+    {
+      "name": "dsh-computer-use-win",
+      "entries": [
+        {
+          "enabled": true,
+          "phase": "active"
+        }
+      ]
+    },
+    {
+      "name": "dsh-context",
+      "entries": [
+        {
+          "enabled": true,
+          "phase": "active"
+        }
+      ]
+    },
+    {
+      "name": "dsh-deepseek-chat",
+      "entries": [
+        {
+          "enabled": true,
+          "phase": "active"
+        }
+      ]
+    },
+    {
+      "name": "dsh-doublecheck",
+      "entries": [
+        {
+          "enabled": true,
+          "phase": "active"
+        },
+        {
+          "enabled": true,
+          "phase": "active"
+        }
+      ]
+    },
+    {
+      "name": "dsh-gemini-voice",
+      "entries": [
+        {
+          "enabled": true,
+          "phase": "active"
+        }
+      ]
+    },
+    {
+      "name": "dsh-local-llm-controller",
+      "entries": [
+        {
+          "enabled": true,
+          "phase": "active"
+        }
+      ]
+    },
+    {
+      "name": "dsh-paste-spill",
+      "entries": [
+        {
+          "enabled": true,
+          "phase": "active"
+        }
+      ]
+    },
+    {
+      "name": "dsh-suggest-ghost",
+      "entries": [
+        {
+          "enabled": true,
+          "phase": "active"
+        }
+      ]
+    },
+    {
+      "name": "dsh-voice-notify",
+      "entries": [
+        {
+          "enabled": true,
+          "phase": "active"
+        }
+      ]
+    },
+    {
+      "name": "dsh-voice-router",
+      "entries": [
+        {
+          "enabled": true,
+          "phase": "active"
+        }
+      ]
+    },
+    {
+      "name": "dsh-whale-desktop-integration",
+      "entries": [
+        {
+          "enabled": true,
+          "phase": "active"
+        }
+      ]
+    },
+    {
+      "name": "superpowers-dsh",
+      "entries": [
+        {
+          "enabled": true,
+          "phase": "active"
+        }
+      ]
+    },
+    {
+      "name": "whale-girl",
+      "entries": [
+        {
+          "enabled": true,
+          "phase": "active"
+        }
+      ]
+    }
+  ],
+  "scope": "Windows x64 isolated homes on one physical machine; no new Google login, microphone, paid cloud, local model or desktop pet behavior test in this kit revision.",
+  "relocation": {
+    "passed": true,
+    "newDirectoryWithChineseAndSpaces": true,
+    "pinnedSourceResolvesInsideNewHome": true,
+    "all14PluginsActive": true,
+    "updatable": false,
+    "versionsProblem": "not-updatable"
+  }
+}

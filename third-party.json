@@ -2436,5 +2436,30 @@
     "licenseFiles": [
       "LICENSE"
     ]
+  },
+  {
+    "name": "dsh-deepseek-chat",
+    "version": "0.2.22",
+    "path": "profiles/desktop/node_modules/dsh-deepseek-chat",
+    "license": "UNSPECIFIED",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/xingxingbk-git/dsh-deepseek-chat.git"
+    },
+    "licenseFiles": [],
+    "sourceCommit": "4ba6ade65efc851bd2607501956fd2836060596b"
+  },
+  {
+    "name": "zod",
+    "version": "4.6.6",
+    "path": "profiles/desktop/node_modules/dsh-deepseek-chat/node_modules/zod",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/colinhacks/zod.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
   }
 ]

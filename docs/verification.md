@@ -1,4 +1,19 @@
-# 验收记录
+# 1.0.1 Google 登录修复与版本固定验收
+
+环境：Windows x64，官方 DSH 0.2.2-rc.1，PowerShell 7。日期：2026-11-11。
+
+- 套件包含 14 个插件、188 个生产包、14,141 个文件。离线审计的文件哈希、本地修复包对应内容、敏感路径和密钥特征扫描全部通过。
+- 在原公开负载上新增修复插件及其独立的 zod 4.6.6；原有 13,256 个文件字节不变，仅修改 profile 的 package.json 以登记新增插件。
+- 在含中文和空格的新目录安装，官方 Host 的插件清单确认全部 14 个插件 active；原有 15 项图标、菜单与通知检查通过。
+- 官方插件管理器报告修复插件 enabled=true、updatable=false；查询更新版本返回 not-updatable。修复包的 43 个发布文件与本机安装内容一致。
+- 复制恢复到第二个中文/空格目录后，14 个插件再次全部 active；固定来源自动解析至新 home 内的修复包，仍拒绝常规更新。测试实例均已停止。
+- 仅验证同一物理电脑上的隔离安装和路径变化。本次安装使用 SkipDesktopPet；没有重新执行真实 Google 登录、麦克风、付费云服务、本地模型或桌宠行为测试。此前本机 Google 登录已由用户完成并确认能聊天，不能据此替代另一台电脑的账号登录测试。
+
+固定的是 fork 提交 4ba6ade65efc851bd2607501956fd2836060596b 构建的 0.2.22 候选包，不是已发布的 npm 正式版。只有确认上游正式发行包含 [PR #18](https://github.com/xingxingbk-git/dsh-deepseek-chat/pull/18) 或等效修复后，才手动切回官方来源；没有自动监视或解除固定的任务。
+
+机器可读证据：[google-login-pin-verification.json](google-login-pin-verification.json)。线上结果见 [GitHub Actions](https://github.com/SparklingAstronaut/dsh-env-kit/actions/workflows/verify.yml)。
+
+# 1.0.0 历史验收记录
 
 环境：Windows x64，官方 DSH 0.2.2-rc.1，PowerShell 7，官方随附 Node 24.21.0。日期：2026-11-10。
 

@@ -48,7 +48,7 @@ try {
     if ((Split-Path (Full-Path $stage) -Parent) -ne $parent) { throw 'Staging location mismatch.' }
     if (Test-Path -LiteralPath $DshHome) { throw 'Target appeared during installation; staging retained.' }
     Move-Item -LiteralPath $stage -Destination $DshHome
-    Write-Output "Installed 13 plugins into: $DshHome"
+    Write-Output "Installed $(@($manifest.plugins).Count) plugins into: $DshHome"
     Write-Output 'Use Start-DSH.ps1 with this home. Configure API keys and model folders in DSH settings.'
 } catch {
     throw "Install failed; active homes were not replaced. Staging retained at $stage. $($_.Exception.Message)"

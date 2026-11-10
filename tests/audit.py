@@ -1,6 +1,6 @@
 """Offline public release audit. No account, model or original-machine files needed."""
 from pathlib import Path, PurePosixPath
-import hashlib, json, re, sys, zipfile
+import hashlib, io, json, re, sys, tarfile, zipfile
 root=Path(__file__).resolve().parents[1]
 manifest=json.loads((root/'manifest.json').read_text('utf-8'))
 archive=root/manifest['payload']['file']
@@ -27,10 +27,35 @@ with zipfile.ZipFile(archive) as z:
                      r'-----BEGIN (?:RSA |OPENSSH )?PRIVATE KEY-----']:
             if re.search(rule,text):failures.append({'file':name,'rule':rule})
     profile=json.loads(z.read('profiles/desktop/package.json'))
-    assert len(profile['dependencies'])==13
     assert set(profile['dependencies'])=={p['name'] for p in manifest['plugins']}
-    assert all(not v.startswith(('file:','link:','^','~')) for v in profile['dependencies'].values())
+    assert profile['dsh']['profile']['bundles']==manifest['bundles']
+    for plugin in manifest['plugins']:
+        name=plugin['name']
+        source=plugin.get('source',plugin['version'])
+        assert profile['dependencies'][name]==source
+        installed_root='profiles/desktop/node_modules/'+name+'/'
+        assert json.loads(z.read(installed_root+'package.json'))['version']==plugin['version']
+        if 'source' in plugin:
+            # Only a checked-in, relative, immutable tarball is allowed as a pin.
+            assert source.startswith('file:./pinned-packages/')
+            relative=source[len('file:./'):]
+            assert '..' not in PurePosixPath(relative).parts and ':' not in relative and '\\' not in relative
+            tarbytes=z.read('profiles/desktop/'+relative)
+            assert hashlib.sha256(tarbytes).hexdigest()==plugin['sha256']
+            with tarfile.open(fileobj=io.BytesIO(tarbytes)) as t:
+                for item in t:
+                    assert not item.issym() and not item.islnk()
+                    assert item.name.startswith('package/') and '..' not in PurePosixPath(item.name).parts
+                    if item.isfile():
+                        assert t.extractfile(item).read()==z.read(installed_root+item.name[len('package/'):]),item.name
+        else:
+            assert re.fullmatch(r'\d+\.\d+\.\d+(?:[-+][\w.-]+)?',source),source
+    chat=next(p for p in manifest['plugins'] if p['name']=='dsh-deepseek-chat')
+    assert chat['source'].startswith('file:./pinned-packages/')
+    chatroot='profiles/desktop/node_modules/dsh-deepseek-chat/'
+    chatmeta=json.loads(z.read(chatroot+'package.json'))
+    assert json.loads(z.read(chatroot+'node_modules/zod/package.json'))['version']==chatmeta['dependencies']['zod']
     patch=z.read('profiles/desktop/cordis.patch.yml').decode()
     assert all(key not in patch for key in ['apiKey:','llamaDir:','providers:'])
 assert not failures,json.dumps(failures,ensure_ascii=False)
-print(json.dumps({'passed':True,'filesChecked':len(expected),'plugins':13,'secretAndPathFindings':0}))
+print(json.dumps({'passed':True,'filesChecked':len(expected),'plugins':len(manifest['plugins']),'pinnedGoogleLogin':True,'secretAndPathFindings':0}))
