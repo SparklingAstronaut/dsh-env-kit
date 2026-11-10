@@ -62,5 +62,8 @@ with zipfile.ZipFile(archive) as z:
     assert json.loads(z.read(chatroot+'node_modules/zod/package.json'))['version']==chatmeta['dependencies']['zod']
     patch=z.read('profiles/desktop/cordis.patch.yml').decode()
     assert all(key not in patch for key in ['apiKey:','llamaDir:','providers:'])
+    assert all(key in patch for key in ['testCommandPatterns:','testFilePatterns:','reportTestCommandPatterns:','reportTestFilePatterns:'])
+    instructions=z.read('AGENTS.md').decode('utf-8-sig')
+    assert all(name in instructions for name in ['using-superpowers','systematic-debugging','doublecheck_spec','verification-before-completion','doublecheck_report'])
 assert not failures,json.dumps(failures,ensure_ascii=False)
 print(json.dumps({'passed':True,'filesChecked':len(expected),'plugins':len(manifest['plugins']),'pinnedGoogleLogin':True,'secretAndPathFindings':0}))

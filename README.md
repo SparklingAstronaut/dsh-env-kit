@@ -5,13 +5,15 @@
 >
 > 本套件包含的 **dsh-deepseek-chat 0.2.22 修复候选**已收到问题反馈：普通账号密码登录提交后出现空白页面或错误。Google 登录并返回 DeepSeek 聊天已有实测确认，**不代表其他登录方式也正常**。
 >
-> 普通账号密码登录的失败现场仍待复现，根因尚未确认；目前不能判断是原插件已有问题还是 Google 修复引入的回归。**请勿将“Google 登录修复”理解为所有登录方式均已修复。** 此说明适用于 1.0.1、1.0.2 标准包和完整离线包中的网页聊天插件。详见 [已知问题反馈](https://github.com/xingxingbk-git/dsh-deepseek-chat/pull/18#issuecomment-6772359887)。
+> 普通账号密码登录的失败现场仍待复现，根因尚未确认；目前不能判断是原插件已有问题还是 Google 修复引入的回归。**请勿将“Google 登录修复”理解为所有登录方式均已修复。** 此说明适用于 1.0.1、1.0.2、1.0.3 标准包和完整离线包中的网页聊天插件。详见 [已知问题反馈](https://github.com/xingxingbk-git/dsh-deepseek-chat/pull/18#issuecomment-6772359887)。
 
 [![Verify portable kit](https://github.com/SparklingAstronaut/dsh-env-kit/actions/workflows/verify.yml/badge.svg)](https://github.com/SparklingAstronaut/dsh-env-kit/actions/workflows/verify.yml)
 
 一次装好 14 个 DSH 插件，换电脑也能恢复。**下载、安装、密钥申请、本地模型和 AI 提示词都在本页，按顺序操作即可。**
 
 适用：**Windows x64 · 官方 DSH 0.2.2-rc.1 · PowerShell 7**。套件不包含账号、密钥、聊天记录、模型或推理程序。
+
+**1.0.3 补齐虚拟宠物设置图标修复，并把菜单回归检查扩展到语音、语音路由、电脑操控、本地模型和虚拟宠物。** 宠物插件的包、前端和后端版本统一为 1.1.7；其余 13 个插件复用已经校验的固定安装包，不改版本或来源；同时补齐 Doublecheck 的 Python 测试识别配置和默认工程规则。全部插件逐项核对记录见 [插件审计](docs/plugin-audit-1.0.3.md)。
 
 **1.0.2 修复语音栏目重复图标，固定猜字无发光补丁，并同步安装来源。** 语音使用正式发布的 0.3.7，源文件与独立发布包一致。全部 14 个内置插件保存为随包携带、带校验值的相对路径安装包，并附依赖锁定文件；新增、卸载其他插件时，包管理器可恢复原来的修复内容。新增插件后可启动及同版本换路径恢复。内置插件的来源、版本或文件发生漂移仍会被校验拒绝；常规自动更新不会替换这些固定包，升级内置插件需使用经过验证的新套件或主动迁移来源。
 
@@ -22,7 +24,7 @@
 <a id="install"></a>
 ## 1. 下载并准备
 
-**[点击下载完整离线包](https://github.com/SparklingAstronaut/dsh-env-kit/releases/download/v1.0.2/dsh-env-kit-1.0.2-offline-win-x64.zip)**
+**[点击下载完整离线包](https://github.com/SparklingAstronaut/dsh-env-kit/releases/download/v1.0.3/dsh-env-kit-1.0.3-offline-win-x64.zip)**
 
 整个解压，保留里面 `dsh-env-kit` 文件夹和 `electron-v45.1.0-win32-x64.zip` 的相对位置；Electron ZIP 不用手动解压。只需这个套件包，不用再下载标准包或 “Source code”。
 
@@ -167,7 +169,7 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File .\scripts\Restore-DSHKit.ps1 `
 | dsh-local-llm-controller | 2.0.4-kvmem.1-official.2 | 启停、配置本地推理服务 |
 | dsh-paste-spill | 0.2.0 | 长文本粘贴处理 |
 | dsh-suggest-ghost | 0.9.0 | 智能追问建议，保留无发光补丁 |
-| dsh-whale-desktop-integration | 1.1.6 | 桌宠侧栏、设置与桌面联动 |
+| dsh-whale-desktop-integration | 1.1.7 | 桌宠侧栏、设置与桌面联动 |
 | superpowers-dsh | 0.5.0 | 工程工作流技能 |
 | whale-girl | 0.2.3 | 网页宠物 |
 
@@ -180,8 +182,8 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File .\scripts\Restore-DSHKit.ps1 `
 <details>
 <summary>校验、回滚与其他下载方式（一般安装不需要看）</summary>
 
-- [Release 下载页](https://github.com/SparklingAstronaut/dsh-env-kit/releases/tag/v1.0.2) · [SHA-256 校验清单](https://github.com/SparklingAstronaut/dsh-env-kit/releases/download/v1.0.2/dsh-env-kit-1.0.2-SHA256SUMS.txt)。可用 `Get-FileHash .\dsh-env-kit-1.0.2-offline-win-x64.zip -Algorithm SHA256` 核对同名文件的值。
-- [标准包](https://github.com/SparklingAstronaut/dsh-env-kit/releases/download/v1.0.2/dsh-env-kit-1.0.2.zip) 不带 Electron；安装时省略 `-ElectronArchive` 会从官方源下载固定桌宠组件并校验。`-SkipDesktopPet` 可跳过桌面组件，但不属于完整桌宠恢复。
+- [Release 下载页](https://github.com/SparklingAstronaut/dsh-env-kit/releases/tag/v1.0.3) · [SHA-256 校验清单](https://github.com/SparklingAstronaut/dsh-env-kit/releases/download/v1.0.3/dsh-env-kit-1.0.3-SHA256SUMS.txt)。可用 `Get-FileHash .\dsh-env-kit-1.0.3-offline-win-x64.zip -Algorithm SHA256` 核对同名文件的值。
+- [标准包](https://github.com/SparklingAstronaut/dsh-env-kit/releases/download/v1.0.3/dsh-env-kit-1.0.3.zip) 不带 Electron；安装时省略 `-ElectronArchive` 会从官方源下载固定桌宠组件并校验。`-SkipDesktopPet` 可跳过桌面组件，但不属于完整桌宠恢复。
 - 重复安装同版本套件会校验文件并保留设置；插件文件被修改时会报错，不会悄悄覆盖。
 - 需要回滚时，关闭这个套件实例，再在套件文件夹运行：
 

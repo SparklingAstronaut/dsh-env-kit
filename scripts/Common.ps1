@@ -77,8 +77,8 @@ function Expand-SafeZip([string]$Archive,[string]$Destination) {
 function Test-Payload([string]$DshHome, [switch]$Pristine) {
     $inventory = Read-Json (Join-Path $script:KitRoot 'payload-files.json')
     foreach ($entry in $inventory.PSObject.Properties) {
-        # The app owns this one settings document after first launch.
-        if ($entry.Name -eq 'profiles/desktop/cordis.patch.yml') { continue }
+        # Users own their settings and instructions after first launch.
+        if (-not $Pristine -and $entry.Name -in @('profiles/desktop/cordis.patch.yml','AGENTS.md')) { continue }
         # pnpm owns the dependency layout and lockfile after plugin operations.
         # Verify release extraction in full; at runtime verify pinned package
         # contents below, independent of dependency hoisting and added plugins.

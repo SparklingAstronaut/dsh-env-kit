@@ -12,6 +12,12 @@ function Check-Installation([string]$Path) {
 }
 $DshHome = Full-Path $DshHome
 Check-Installation $DshHome
+$instructions = Join-Path $DshHome 'AGENTS.md'
+$instructionsBefore = [IO.File]::ReadAllBytes($instructions)
+try {
+    [IO.File]::AppendAllText($instructions,"`n<!-- User instruction customization probe -->`n")
+    Test-Payload $DshHome
+} finally { [IO.File]::WriteAllBytes($instructions,$instructionsBefore) }
 $fixture = Join-Path ([IO.Path]::GetTempPath()) ('dsh-addon-' + [guid]::NewGuid())
 $null = New-Item -ItemType Directory -Path $fixture
 Write-Json (Join-Path $fixture 'package.json') @{name='dsh-kit-install-probe';version='0.0.0';private=$true}

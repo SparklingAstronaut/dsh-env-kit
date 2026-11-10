@@ -1,0 +1,166 @@
+--- a/client.js
++++ b/client.js
+@@ -2,7 +2,7 @@
+  const React=require('react'),h=React.createElement;
+  // DSH 官方界面组件：从平台内置的组件表按需取用（无需在 package.json 声明依赖）；取不到就用自绘控件
+  let UI=null;try{UI=require('@deepseek-ai/dsh-client-ui-primitives');}catch(_){UI=null;}
+- const VERSION='1.1.6',NAME='whale-desktop-integration',NS='settings.whale-desktop';
++ const VERSION='1.1.7',NAME='whale-desktop-integration',NS='settings.whale-desktop';
+  // v1.1.1：按用户要求移除“账号菜单注入”这个最容易随 DSH 界面变化而失效的入口。
+  // 现在只有两个官方槽入口：设置 → 虚拟宠物（settings.section）与侧栏底部鲸鱼按钮（sidebar.footer.action）。
+  // 任何一步失败都不影响另一个入口和桌宠本体；locale 服务存在时自动中英文切换。
+@@ -23,7 +23,7 @@
+  const inject=['slots'];
+  function apply(ctx){
+   ctx.effect(()=>{
+-   let disposed=false,busy=false,inSync=false,reportAt=0;
++   let disposed=false,busy=false,reportAt=0;
+    let locale=null,offLocale=null;
+    const state={visible:false,running:false,size:140,error:''};
+    const listeners=new Set();
+@@ -33,7 +33,7 @@
+    const fallback=(key)=>zh[key]!==undefined?zh[key]:(en[key]!==undefined?en[key]:key);
+    const t=(key)=>{ if(!hasLocale)return fallback(key); try{const value=locale.bind(NS)(key);return (value===undefined||value===null||value===key)?fallback(key):value;}catch(_){return fallback(key);} };
+    const snapshot=()=>({...state,busy:!!busy,version:VERSION});
+-   const notify=()=>{ for(const fn of listeners){ try{fn();}catch(_){} } try{syncDom();}catch(_){} };
++   const notify=()=>{ for(const fn of listeners){ try{fn();}catch(_){} } };
+    const request=async(patch)=>{
+     const init=patch?{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(patch)}:{cache:'no-store'};
+     const res=await fetch('/whale-desktop/control',init);
+@@ -54,23 +54,13 @@
+    }catch(_){}};
+    const style=document.createElement('style'); style.dataset.whaleDesktop='true';
+    style.textContent=`[data-whale-girl]{display:none!important}.wg-settings{max-width:760px;color:var(--dsw-alias-label-primary);display:flex;flex-direction:column}.wg-heading{margin:0;font-size:18px;font-weight:600;line-height:1.4}.wg-intro{color:var(--dsw-alias-label-tertiary);margin:6px 0 4px;font-size:13px;line-height:1.5}.wg-row{border-bottom:.5px solid var(--dsw-alias-border-l2,#8883);justify-content:space-between;align-items:center;gap:24px;padding:16px 0;display:flex}.wg-row-main{display:flex;align-items:center;gap:12px;min-width:0}.wg-row-title{font-size:14px;line-height:20px}.wg-row-desc{color:var(--dsw-alias-label-secondary);margin-top:4px;font-size:12px;line-height:18px}.wg-row-control{flex:none}.wg-thumb{flex:none;width:44px;height:44px;border-radius:10px;background-color:var(--dsw-alias-interactive-bg-hover,#7772);background-image:url('/whale-girl/assets/characters/whale-girl/idle.png');background-size:132px 44px;background-repeat:no-repeat;background-position:0 0}.wg-error{color:var(--dsw-alias-state-danger-primary,#f66);font-size:12px;line-height:18px;margin-top:12px}.wg-foot{color:var(--dsw-alias-label-tertiary);font-size:12px;line-height:18px;margin:14px 0 0}.wg-button{color:var(--dsw-alias-label-primary);background:transparent;border:1px solid var(--dsw-alias-border-l2,#8885);border-radius:8px;padding:5px 12px;font:inherit;font-size:13px;cursor:pointer}.wg-button:disabled{opacity:.5;cursor:default}.wg-select option{background:#292a2c;color:#f4f4f5}.wg-footer-action{display:flex;align-items:center;gap:8px;height:32px;padding:0 8px;color:var(--dsw-alias-label-secondary);background:0 0;border:0;border-radius:var(--dsw-radius-md);cursor:pointer;font:inherit}.wg-footer-action:hover{background:var(--dsw-alias-interactive-bg-hover);color:var(--dsw-alias-label-primary)}.wg-footer-action[data-wg-visible=true]{color:var(--dsw-alias-state-business-primary)}.wg-footer-label{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}`;
+-   style.textContent+=`[data-whale-pet-nav] svg{background:currentColor;mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%222%202%2020%2020%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M5%2012a7%207%200%200%201%2014%200v5a2%202%200%200%201-3.4%201.4L14%2020l-2-1.6L10%2020l-1.6-1.6A2%202%200%200%201%205%2017Z%22%2F%3E%3Ccircle%20cx%3D%229%22%20cy%3D%2212%22%20r%3D%22.9%22%20fill%3D%22black%22%20stroke%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2215%22%20cy%3D%2212%22%20r%3D%22.9%22%20fill%3D%22black%22%20stroke%3D%22none%22%2F%3E%3C%2Fsvg%3E") center/contain no-repeat}[data-whale-pet-nav] svg>*{visibility:hidden}`;
+    document.head.append(style);
+-   // 保留的唯一 DOM 操作：设置弹窗侧栏里给我们自己那一项加个小鲸鱼图标（纯装饰，失败静默跳过）
+-   const NAV_LABELS=[zh.nav,en.nav,'虚拟宠物','Virtual pet'];
+-   const syncNavIcon=()=>{
+-    for(const panel of document.querySelectorAll('[data-shortcut-modal="settings"]')){
+-     const nav=panel.querySelector('nav');if(!nav)continue;
+-     for(const button of nav.querySelectorAll('button')){
+-      const text=(button.textContent||'').trim();
+-      if(NAV_LABELS.includes(text)){ if(!button.hasAttribute('data-whale-pet-nav'))button.setAttribute('data-whale-pet-nav',''); }
+-     }
+-    }
+-   };
+-   let rafPending=false;
+-   const syncDom=()=>{ if(disposed||inSync)return; if(rafPending)return; rafPending=true; const run=()=>{rafPending=false;inSync=true;try{syncNavIcon();}catch(_){}inSync=false;}; if(typeof requestAnimationFrame==='function')requestAnimationFrame(run);else setTimeout(run,16); };
+-   let observer=null;
+-   try{ observer=new MutationObserver(()=>syncDom()); observer.observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['aria-expanded','data-shortcut-modal']}); }catch(_){ observer=null; }
++   // 官方槽：设置导航图标（settings.section.icon）。旧版用 MutationObserver + CSS mask 改 DOM，
++   // DSH 0.2.2 起官方提供图标槽，这里改成注册图标，不再改设置页 DOM。
++   const PetIcon=(props)=>{const size=props&&typeof props.size==='number'?props.size:16;return h('svg',{width:size,height:size,viewBox:'2 2 20 20',fill:'none',stroke:'currentColor',strokeWidth:1.6,strokeLinecap:'round',strokeLinejoin:'round','aria-hidden':'true',focusable:'false'},
++    h('path',{d:'M5 12a7 7 0 0 1 14 0v5a2 2 0 0 1-3.4 1.4L14 20l-2-1.6L10 20l-1.6-1.6A2 2 0 0 1 5 17Z'}),
++    h('circle',{cx:'9',cy:'12',r:'.9',fill:'currentColor',stroke:'none'}),
++    h('circle',{cx:'15',cy:'12',r:'.9',fill:'currentColor',stroke:'none'}));};
+ 
+    // 官方槽 1：设置 → 虚拟宠物。布局与 DSH 官方设置页一致（标题 + 说明 + 每项一行），
+    // 控件优先用 DSH 自带的 Switch / SegmentedControl / Button；拿不到时退回自绘控件，页面照常可用。
+@@ -124,19 +114,21 @@
+    let offSettings=null;try{
+     offSettings=ctx.slots.inject('settings.section',()=>ctx.slots.register({name:'settings.section',id:'whale-desktop',order:15,label:()=>t('nav')},Panel));
+    }catch(_){}
++   let offSettingsIcon=null;try{
++    offSettingsIcon=ctx.slots.inject('settings.section.icon',()=>ctx.slots.register({name:'settings.section.icon',id:'whale-desktop',order:15},PetIcon));
++   }catch(_){}
+    let offFooter=null;try{
+     const registration={name:'sidebar.footer.action',id:'whale-desktop',order:10,inject:()=>({store})};
+     if(hasLocale)registration.locale=NS;
+     offFooter=ctx.slots.inject('sidebar.footer.action',()=>ctx.slots.register(registration,FooterAction));
+    }catch(_){}
+    const interval=setInterval(()=>{if(!disposed)refresh();},2500);
+-   refresh();syncDom();reportClient();
++   refresh();reportClient();
+    return()=>{
+     disposed=true;
+     clearInterval(interval);
+-    try{if(observer)observer.disconnect();}catch(_){}
+     try{style.remove();}catch(_){}
+-    try{for(const el of document.querySelectorAll('[data-whale-pet-nav]'))el.removeAttribute('data-whale-pet-nav');}catch(_){}
++    try{if(offSettingsIcon)offSettingsIcon();}catch(_){}
+     try{if(offSettings)offSettings();}catch(_){}
+     try{if(offFooter)offFooter();}catch(_){}
+     try{if(offLocale)offLocale();}catch(_){}
+--- a/index.mjs
++++ b/index.mjs
+@@ -3,7 +3,7 @@
+ import {join} from 'node:path';
+ import {normalize,allowed,LOCAL_HOST} from './controller.mjs';
+ export const name='whale-desktop-integration';
+-export const version='1.1.6';
++export const version='1.1.7';
+ // v1.1.0：不再硬依赖 whale-girl.pet 服务——whale-girl 插件缺失、更新改名或加载失败时，本插件仍会加载，
+ // 设置页/侧栏按钮可用并显示可读错误；启动失败会每 5s 自动重试，Harness 更新后不需要手动点两次。
+ export const inject=['webServer'];
+--- a/package.json
++++ b/package.json
+@@ -1,34 +1,34 @@
+-{
+-  "name": "dsh-whale-desktop-integration",
+-  "version": "1.1.6",
+-  "type": "module",
+-  "description": "鲸鱼娘：官方侧栏按钮 + 设置页；已按用户要求移除易失效的账号菜单 DOM 注入；启停独立桌宠；v1.1.6",
+-  "main": "index.mjs",
+-  "exports": {
+-    ".": "./index.mjs",
+-    "./client": "./client.js",
+-    "./package.json": "./package.json"
+-  },
+-  "dsh": {
+-    "bundle": {
+-      "patch": "./cordis.patch.yml"
+-    },
+-    "client": {
+-      "platform": "web"
+-    }
+-  },
+-  "engines": {
+-    "dsh": ">=0.2.1-rc.3 <1.0.0-0"
+-  },
+-  "files": [
+-    "index.mjs",
+-    "controller.mjs",
+-    "client.js",
+-    "desktop-entry.mjs",
+-    "cordis.patch.yml"
+-  ],
+-  "devDependencies": {
+-    "esbuild": "^0.28.1"
+-  },
+-  "license": "MIT"
+-}
++{
++  "name": "dsh-whale-desktop-integration",
++  "version": "1.1.7",
++  "type": "module",
++  "description": "Whale desktop integration with official settings icon registration and isolated kit storage.",
++  "main": "index.mjs",
++  "exports": {
++    ".": "./index.mjs",
++    "./client": "./client.js",
++    "./package.json": "./package.json"
++  },
++  "dsh": {
++    "bundle": {
++      "patch": "./cordis.patch.yml"
++    },
++    "client": {
++      "platform": "web"
++    }
++  },
++  "engines": {
++    "dsh": ">=0.2.1-rc.3 <1.0.0-0"
++  },
++  "files": [
++    "index.mjs",
++    "controller.mjs",
++    "client.js",
++    "desktop-entry.mjs",
++    "cordis.patch.yml"
++  ],
++  "devDependencies": {
++    "esbuild": "^0.28.1"
++  },
++  "license": "MIT"
++}
