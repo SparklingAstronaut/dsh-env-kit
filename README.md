@@ -6,6 +6,17 @@
 
 本套件与 **官方 DSH 0.2.2-rc.1、Windows x64、PowerShell 7** 配套。其他 DSH 版本会在安装前被拒绝；升级前应在新目录重新验证兼容性。请先自行安装该版本官方 DSH 和 PowerShell 7。
 
+## 换电脑从这里开始
+
+**推荐下载完整离线包**，按 [换机恢复步骤](docs/move-to-new-pc.md) 操作：准备官方 DSH 和 PowerShell 7 → 安装到新目录 → 使用套件启动脚本 → 重新登录或填写密钥 → 配置本地模型 → 实测。
+
+- [完整换机步骤与安装命令](docs/move-to-new-pc.md#install)：写明下载哪个包、目录怎么填、以后怎么启动。
+- [API Key 官方申请入口](docs/move-to-new-pc.md#api-keys)：DeepSeek、Gemini、阿里云百炼；每项都有申请步骤和 DSH 填写位置，只配置需要的服务。
+- [本地模型怎么恢复](docs/move-to-new-pc.md#local-models)：模型、推理程序、路径和首次测试。
+- [复制给 AI 的完整提示词](docs/move-to-new-pc.md#ai-prompt)：让有电脑操作能力的 AI 直接安装、打开官方密钥页面，并在需要登录或手动填写时告诉你具体做什么。
+
+有同版本私有备份并希望保留聊天记录时，使用指南里的 [备份恢复方式](docs/move-to-new-pc.md#private-backup)，与全新安装二选一。公开下载包不包含你的历史记录或密钥。
+
 ## 下载
 
 - [标准安装包](https://github.com/SparklingAstronaut/dsh-env-kit/releases/download/v1.0.0/dsh-env-kit-1.0.0.zip)：包含全部插件和依赖；桌面宠物运行组件在安装时下载。
@@ -64,7 +75,7 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File .\scripts\Install-DSHKit.ps1 `
 ## 首次配置
 
 - **模型**：配置自己的云端供应商，或自行登录官方账号。套件没有预置账号、余额、API 密钥或默认付费模型。
-- **本地模型**：在“本地模型”设置里选择自己电脑上的推理程序目录、服务程序名和模型目录。套件不包含模型权重、llama.cpp/KVMem/NInfer 程序、CUDA 驱动，也不会自动下载模型。
+- **本地模型**：在“本地模型 → 高级设置”里填写推理程序目录和模型文件夹。默认后端是 KVMem，寻找 `llama-kvmem-server.exe`；其他后端和服务程序名需要相应配置，不能只改目录。套件不包含模型权重、推理程序或显卡驱动，具体见 [本地模型恢复步骤](docs/move-to-new-pc.md#local-models)。
 - **语音**：按需要填写 Gemini 或兼容云端转写 API。没有云端密钥时需自行准备本地 SenseVoice 所需组件，不能据此认为云端/麦克风已经测通。
 - **桌宠**：数据在新 DSH home 的 `companions/whale-desktop` 中，与其他安装隔离。
 - **三个提示词技能**：`anima-prompt`、`qwen-prompt`、`story` 仅生成提示词/分镜，不安装图片生成器。
