@@ -1,0 +1,21 @@
+name: Verify portable kit
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  verify:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Validate payload, secrets and paths
+        run: python tests/audit.py
+      - name: Extract isolated fixture
+        shell: pwsh
+        run: Expand-Archive -LiteralPath vendor/plugins-win-x64.zip -DestinationPath "$env:RUNNER_TEMP\kit-home"
+      - name: Exercise frontend and notification contracts
+        shell: pwsh
+        run: node tests/contracts.mjs "$env:RUNNER_TEMP\kit-home"

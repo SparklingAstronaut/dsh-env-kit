@@ -1,0 +1,2440 @@
+[
+  {
+    "name": "@antfu/install-pkg",
+    "version": "2.1.0",
+    "path": "profiles/desktop/node_modules/@antfu/install-pkg",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/antfu-collective/install-pkg.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@braintree/sanitize-url",
+    "version": "7.1.2",
+    "path": "profiles/desktop/node_modules/@braintree/sanitize-url",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/braintree/sanitize-url.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@chevrotain/types",
+    "version": "11.1.2",
+    "path": "profiles/desktop/node_modules/@chevrotain/types",
+    "license": "Apache-2.0",
+    "repository": {
+      "type": "git",
+      "url": "git://github.com/Chevrotain/chevrotain.git"
+    },
+    "licenseFiles": [
+      "LICENSE.txt"
+    ]
+  },
+  {
+    "name": "@codemirror/autocomplete",
+    "version": "6.20.4",
+    "path": "profiles/desktop/node_modules/@codemirror/autocomplete",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://code.haverbeke.berlin/codemirror/autocomplete.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@codemirror/commands",
+    "version": "6.11.1",
+    "path": "profiles/desktop/node_modules/@codemirror/commands",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://code.haverbeke.berlin/codemirror/commands.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@codemirror/lang-cpp",
+    "version": "6.0.3",
+    "path": "profiles/desktop/node_modules/@codemirror/lang-cpp",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/codemirror/lang-cpp.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@codemirror/lang-css",
+    "version": "6.3.1",
+    "path": "profiles/desktop/node_modules/@codemirror/lang-css",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/codemirror/lang-css.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@codemirror/lang-go",
+    "version": "6.0.1",
+    "path": "profiles/desktop/node_modules/@codemirror/lang-go",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/codemirror/lang-go.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@codemirror/lang-html",
+    "version": "6.4.12",
+    "path": "profiles/desktop/node_modules/@codemirror/lang-html",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://code.haverbeke.berlin/codemirror/lang-html.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@codemirror/lang-java",
+    "version": "6.0.2",
+    "path": "profiles/desktop/node_modules/@codemirror/lang-java",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/codemirror/lang-java.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@codemirror/lang-javascript",
+    "version": "6.2.5",
+    "path": "profiles/desktop/node_modules/@codemirror/lang-javascript",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/codemirror/lang-javascript.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@codemirror/lang-json",
+    "version": "6.0.2",
+    "path": "profiles/desktop/node_modules/@codemirror/lang-json",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/codemirror/lang-json.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@codemirror/lang-markdown",
+    "version": "6.5.2",
+    "path": "profiles/desktop/node_modules/@codemirror/lang-markdown",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://code.haverbeke.berlin/codemirror/lang-markdown.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@codemirror/lang-php",
+    "version": "6.0.2",
+    "path": "profiles/desktop/node_modules/@codemirror/lang-php",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/codemirror/lang-php.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@codemirror/lang-python",
+    "version": "6.2.1",
+    "path": "profiles/desktop/node_modules/@codemirror/lang-python",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/codemirror/lang-python.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@codemirror/lang-rust",
+    "version": "6.0.2",
+    "path": "profiles/desktop/node_modules/@codemirror/lang-rust",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/codemirror/lang-rust.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@codemirror/lang-sql",
+    "version": "6.10.0",
+    "path": "profiles/desktop/node_modules/@codemirror/lang-sql",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/codemirror/lang-sql.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@codemirror/lang-vue",
+    "version": "0.1.3",
+    "path": "profiles/desktop/node_modules/@codemirror/lang-vue",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/codemirror/lang-vue.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@codemirror/lang-xml",
+    "version": "6.1.0",
+    "path": "profiles/desktop/node_modules/@codemirror/lang-xml",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/codemirror/lang-xml.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@codemirror/lang-yaml",
+    "version": "6.1.3",
+    "path": "profiles/desktop/node_modules/@codemirror/lang-yaml",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/codemirror/lang-yaml.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@codemirror/language",
+    "version": "6.13.1",
+    "path": "profiles/desktop/node_modules/@codemirror/language",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://code.haverbeke.berlin/codemirror/language.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@codemirror/legacy-modes",
+    "version": "6.5.5",
+    "path": "profiles/desktop/node_modules/@codemirror/legacy-modes",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://code.haverbeke.berlin/codemirror/legacy-modes.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@codemirror/lint",
+    "version": "6.9.7",
+    "path": "profiles/desktop/node_modules/@codemirror/lint",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://code.haverbeke.berlin/codemirror/lint.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@codemirror/search",
+    "version": "6.7.2",
+    "path": "profiles/desktop/node_modules/@codemirror/search",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://code.haverbeke.berlin/codemirror/search.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@codemirror/state",
+    "version": "6.7.6",
+    "path": "profiles/desktop/node_modules/@codemirror/state",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://code.haverbeke.berlin/codemirror/state.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@codemirror/streamparser",
+    "version": "6.0.0",
+    "path": "profiles/desktop/node_modules/@codemirror/streamparser",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://code.haverbeke.berlin/codemirror/streamparser.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@codemirror/view",
+    "version": "6.43.15",
+    "path": "profiles/desktop/node_modules/@codemirror/view",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://code.haverbeke.berlin/codemirror/view.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@deepseek-ai/cosmokit",
+    "version": "1.9.0",
+    "path": "profiles/desktop/node_modules/@deepseek-ai/cosmokit",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+      "directory": "vendor/cosmokit"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@deepseek-ai/schemastery",
+    "version": "3.19.0",
+    "path": "profiles/desktop/node_modules/@deepseek-ai/schemastery",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+      "directory": "vendor/schemastery"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@formkit/auto-animate",
+    "version": "0.10.2",
+    "path": "profiles/desktop/node_modules/@formkit/auto-animate",
+    "license": "MIT",
+    "repository": "https://github.com/formkit/auto-animate.git",
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@iconify/types",
+    "version": "2.0.0",
+    "path": "profiles/desktop/node_modules/@iconify/types",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/iconify/iconify.git",
+      "directory": "packages/types"
+    },
+    "licenseFiles": [
+      "license.txt"
+    ]
+  },
+  {
+    "name": "@iconify/utils",
+    "version": "3.1.7",
+    "path": "profiles/desktop/node_modules/@iconify/utils",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/iconify/iconify.git",
+      "directory": "packages/utils"
+    },
+    "licenseFiles": [
+      "license.txt",
+      "lib/misc/licenses.d.ts",
+      "lib/misc/licenses.js"
+    ]
+  },
+  {
+    "name": "@lezer/common",
+    "version": "1.5.5",
+    "path": "profiles/desktop/node_modules/@lezer/common",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://code.haverbeke.berlin/lezer/common.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@lezer/cpp",
+    "version": "1.1.6",
+    "path": "profiles/desktop/node_modules/@lezer/cpp",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://code.haverbeke.berlin/lezer/cpp.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@lezer/css",
+    "version": "1.3.9",
+    "path": "profiles/desktop/node_modules/@lezer/css",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://code.haverbeke.berlin/lezer/css.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@lezer/go",
+    "version": "1.0.1",
+    "path": "profiles/desktop/node_modules/@lezer/go",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/lezer-parser/go.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@lezer/highlight",
+    "version": "1.2.5",
+    "path": "profiles/desktop/node_modules/@lezer/highlight",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://code.haverbeke.berlin/lezer/highlight.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@lezer/html",
+    "version": "1.3.13",
+    "path": "profiles/desktop/node_modules/@lezer/html",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/lezer-parser/html.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@lezer/java",
+    "version": "1.1.5",
+    "path": "profiles/desktop/node_modules/@lezer/java",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://code.haverbeke.berlin/lezer/java.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@lezer/javascript",
+    "version": "1.5.6",
+    "path": "profiles/desktop/node_modules/@lezer/javascript",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://code.haverbeke.berlin/lezer/javascript.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@lezer/json",
+    "version": "1.0.3",
+    "path": "profiles/desktop/node_modules/@lezer/json",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/lezer-parser/json.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@lezer/lr",
+    "version": "1.4.12",
+    "path": "profiles/desktop/node_modules/@lezer/lr",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://code.haverbeke.berlin/lezer/lr.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@lezer/markdown",
+    "version": "1.8.1",
+    "path": "profiles/desktop/node_modules/@lezer/markdown",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://code.haverbeke.berlin/lezer/markdown.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@lezer/php",
+    "version": "1.0.6",
+    "path": "profiles/desktop/node_modules/@lezer/php",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://code.haverbeke.berlin/lezer/php.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@lezer/python",
+    "version": "1.1.19",
+    "path": "profiles/desktop/node_modules/@lezer/python",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://code.haverbeke.berlin/lezer/python.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@lezer/rust",
+    "version": "1.0.3",
+    "path": "profiles/desktop/node_modules/@lezer/rust",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://code.haverbeke.berlin/lezer/rust.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@lezer/xml",
+    "version": "1.0.6",
+    "path": "profiles/desktop/node_modules/@lezer/xml",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/lezer-parser/xml.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@lezer/yaml",
+    "version": "1.0.4",
+    "path": "profiles/desktop/node_modules/@lezer/yaml",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/lezer-parser/yaml.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@marijn/find-cluster-break",
+    "version": "1.0.4",
+    "path": "profiles/desktop/node_modules/@marijn/find-cluster-break",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://code.haverbeke.berlin/marijn/find-cluster-break.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@mermaid-js/parser",
+    "version": "1.2.1",
+    "path": "profiles/desktop/node_modules/@mermaid-js/parser",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/mermaid-js/mermaid.git",
+      "directory": "packages/parser"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@standard-schema/spec",
+    "version": "1.1.0",
+    "path": "profiles/desktop/node_modules/@standard-schema/spec",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/standard-schema/standard-schema"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3",
+    "version": "7.4.3",
+    "path": "profiles/desktop/node_modules/@types/d3",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-array",
+    "version": "3.2.2",
+    "path": "profiles/desktop/node_modules/@types/d3-array",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-array"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-axis",
+    "version": "3.0.6",
+    "path": "profiles/desktop/node_modules/@types/d3-axis",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-axis"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-brush",
+    "version": "3.0.6",
+    "path": "profiles/desktop/node_modules/@types/d3-brush",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-brush"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-chord",
+    "version": "3.0.6",
+    "path": "profiles/desktop/node_modules/@types/d3-chord",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-chord"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-color",
+    "version": "3.1.3",
+    "path": "profiles/desktop/node_modules/@types/d3-color",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-color"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-contour",
+    "version": "3.0.6",
+    "path": "profiles/desktop/node_modules/@types/d3-contour",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-contour"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-delaunay",
+    "version": "6.0.4",
+    "path": "profiles/desktop/node_modules/@types/d3-delaunay",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-delaunay"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-dispatch",
+    "version": "3.0.7",
+    "path": "profiles/desktop/node_modules/@types/d3-dispatch",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-dispatch"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-drag",
+    "version": "3.0.7",
+    "path": "profiles/desktop/node_modules/@types/d3-drag",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-drag"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-dsv",
+    "version": "3.0.7",
+    "path": "profiles/desktop/node_modules/@types/d3-dsv",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-dsv"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-ease",
+    "version": "3.0.2",
+    "path": "profiles/desktop/node_modules/@types/d3-ease",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-ease"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-fetch",
+    "version": "3.0.7",
+    "path": "profiles/desktop/node_modules/@types/d3-fetch",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-fetch"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-force",
+    "version": "3.0.10",
+    "path": "profiles/desktop/node_modules/@types/d3-force",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-force"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-format",
+    "version": "3.0.4",
+    "path": "profiles/desktop/node_modules/@types/d3-format",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-format"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-geo",
+    "version": "3.1.1",
+    "path": "profiles/desktop/node_modules/@types/d3-geo",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-geo"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-hierarchy",
+    "version": "3.1.7",
+    "path": "profiles/desktop/node_modules/@types/d3-hierarchy",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-hierarchy"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-interpolate",
+    "version": "3.0.4",
+    "path": "profiles/desktop/node_modules/@types/d3-interpolate",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-interpolate"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-path",
+    "version": "3.1.1",
+    "path": "profiles/desktop/node_modules/@types/d3-path",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-path"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-polygon",
+    "version": "3.0.2",
+    "path": "profiles/desktop/node_modules/@types/d3-polygon",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-polygon"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-quadtree",
+    "version": "3.0.6",
+    "path": "profiles/desktop/node_modules/@types/d3-quadtree",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-quadtree"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-random",
+    "version": "3.0.4",
+    "path": "profiles/desktop/node_modules/@types/d3-random",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-random"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-scale",
+    "version": "4.0.9",
+    "path": "profiles/desktop/node_modules/@types/d3-scale",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-scale"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-scale-chromatic",
+    "version": "3.1.0",
+    "path": "profiles/desktop/node_modules/@types/d3-scale-chromatic",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-scale-chromatic"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-selection",
+    "version": "3.0.12",
+    "path": "profiles/desktop/node_modules/@types/d3-selection",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-selection"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-shape",
+    "version": "3.2.0",
+    "path": "profiles/desktop/node_modules/@types/d3-shape",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-shape"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-time",
+    "version": "3.0.4",
+    "path": "profiles/desktop/node_modules/@types/d3-time",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-time"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-time-format",
+    "version": "4.0.3",
+    "path": "profiles/desktop/node_modules/@types/d3-time-format",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-time-format"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-timer",
+    "version": "3.0.2",
+    "path": "profiles/desktop/node_modules/@types/d3-timer",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-timer"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-transition",
+    "version": "3.0.9",
+    "path": "profiles/desktop/node_modules/@types/d3-transition",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-transition"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/d3-zoom",
+    "version": "3.0.9",
+    "path": "profiles/desktop/node_modules/@types/d3-zoom",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/d3-zoom"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/geojson",
+    "version": "7946.0.16",
+    "path": "profiles/desktop/node_modules/@types/geojson",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/geojson"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@types/trusted-types",
+    "version": "2.0.7",
+    "path": "profiles/desktop/node_modules/@types/trusted-types",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "directory": "types/trusted-types"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@upsetjs/venn.js",
+    "version": "2.0.0",
+    "path": "profiles/desktop/node_modules/@upsetjs/venn.js",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/upsetjs/venn.js.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@xterm/addon-fit",
+    "version": "0.11.0",
+    "path": "profiles/desktop/node_modules/@xterm/addon-fit",
+    "license": "MIT",
+    "repository": "https://github.com/xtermjs/xterm.js/tree/master/addons/addon-fit",
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@xterm/xterm",
+    "version": "6.0.0",
+    "path": "profiles/desktop/node_modules/@xterm/xterm",
+    "license": "MIT",
+    "repository": "https://github.com/xtermjs/xterm.js",
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "clsx",
+    "version": "2.1.1",
+    "path": "profiles/desktop/node_modules/clsx",
+    "license": "MIT",
+    "repository": "lukeed/clsx",
+    "licenseFiles": [
+      "license"
+    ]
+  },
+  {
+    "name": "commander",
+    "version": "7.2.0",
+    "path": "profiles/desktop/node_modules/commander",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/tj/commander.js.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "crelt",
+    "version": "1.0.7",
+    "path": "profiles/desktop/node_modules/crelt",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://code.haverbeke.berlin/marijn/crelt.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "cytoscape",
+    "version": "3.34.4",
+    "path": "profiles/desktop/node_modules/cytoscape",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/cytoscape/cytoscape.js.git"
+    },
+    "licenseFiles": [
+      "LICENSE",
+      "license-update.mjs"
+    ]
+  },
+  {
+    "name": "cytoscape-cose-bilkent",
+    "version": "4.1.0",
+    "path": "profiles/desktop/node_modules/cytoscape-cose-bilkent",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/cytoscape/cytoscape.js-cose-bilkent.git"
+    },
+    "licenseFiles": [
+      "LICENSE",
+      "node_modules/cose-base/LICENSE",
+      "node_modules/layout-base/LICENSE"
+    ]
+  },
+  {
+    "name": "cose-base",
+    "version": "1.0.3",
+    "path": "profiles/desktop/node_modules/cytoscape-cose-bilkent/node_modules/cose-base",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/iVis-at-Bilkent/cose-base.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "layout-base",
+    "version": "1.0.2",
+    "path": "profiles/desktop/node_modules/cytoscape-cose-bilkent/node_modules/layout-base",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/iVis-at-Bilkent/layout-base.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "cytoscape-fcose",
+    "version": "2.2.0",
+    "path": "profiles/desktop/node_modules/cytoscape-fcose",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/iVis-at-Bilkent/cytoscape.js-fcose.git"
+    },
+    "licenseFiles": [
+      "LICENSE",
+      "node_modules/cose-base/LICENSE",
+      "node_modules/layout-base/LICENSE"
+    ]
+  },
+  {
+    "name": "cose-base",
+    "version": "2.2.0",
+    "path": "profiles/desktop/node_modules/cytoscape-fcose/node_modules/cose-base",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/iVis-at-Bilkent/cose-base.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "layout-base",
+    "version": "2.0.1",
+    "path": "profiles/desktop/node_modules/cytoscape-fcose/node_modules/layout-base",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/iVis-at-Bilkent/layout-base.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3",
+    "version": "7.9.2",
+    "path": "profiles/desktop/node_modules/d3",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-array",
+    "version": "3.2.5",
+    "path": "profiles/desktop/node_modules/d3-array",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-array.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-axis",
+    "version": "3.0.1",
+    "path": "profiles/desktop/node_modules/d3-axis",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-axis.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-brush",
+    "version": "3.0.1",
+    "path": "profiles/desktop/node_modules/d3-brush",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-brush.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-chord",
+    "version": "3.0.2",
+    "path": "profiles/desktop/node_modules/d3-chord",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-chord.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-color",
+    "version": "3.1.1",
+    "path": "profiles/desktop/node_modules/d3-color",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-color.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-contour",
+    "version": "4.0.3",
+    "path": "profiles/desktop/node_modules/d3-contour",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-contour.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-delaunay",
+    "version": "6.0.6",
+    "path": "profiles/desktop/node_modules/d3-delaunay",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-delaunay.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-dispatch",
+    "version": "3.0.2",
+    "path": "profiles/desktop/node_modules/d3-dispatch",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-dispatch.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-drag",
+    "version": "3.0.1",
+    "path": "profiles/desktop/node_modules/d3-drag",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-drag.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-dsv",
+    "version": "3.0.2",
+    "path": "profiles/desktop/node_modules/d3-dsv",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-dsv.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-ease",
+    "version": "3.0.2",
+    "path": "profiles/desktop/node_modules/d3-ease",
+    "license": "BSD-3-Clause",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-ease.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-fetch",
+    "version": "3.0.2",
+    "path": "profiles/desktop/node_modules/d3-fetch",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-fetch.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-force",
+    "version": "3.0.1",
+    "path": "profiles/desktop/node_modules/d3-force",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-force.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-format",
+    "version": "3.1.3",
+    "path": "profiles/desktop/node_modules/d3-format",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-format.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-geo",
+    "version": "3.1.2",
+    "path": "profiles/desktop/node_modules/d3-geo",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-geo.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-hierarchy",
+    "version": "3.1.3",
+    "path": "profiles/desktop/node_modules/d3-hierarchy",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-hierarchy.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-interpolate",
+    "version": "3.0.2",
+    "path": "profiles/desktop/node_modules/d3-interpolate",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-interpolate.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-path",
+    "version": "3.1.1",
+    "path": "profiles/desktop/node_modules/d3-path",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-path.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-polygon",
+    "version": "3.0.2",
+    "path": "profiles/desktop/node_modules/d3-polygon",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-polygon.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-quadtree",
+    "version": "3.0.2",
+    "path": "profiles/desktop/node_modules/d3-quadtree",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-quadtree.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-random",
+    "version": "3.0.2",
+    "path": "profiles/desktop/node_modules/d3-random",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-random.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-sankey",
+    "version": "0.12.3",
+    "path": "profiles/desktop/node_modules/d3-sankey",
+    "license": "BSD-3-Clause",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-sankey.git"
+    },
+    "licenseFiles": [
+      "LICENSE",
+      "node_modules/d3-array/LICENSE",
+      "node_modules/d3-path/LICENSE",
+      "node_modules/d3-shape/LICENSE",
+      "node_modules/internmap/LICENSE"
+    ]
+  },
+  {
+    "name": "d3-array",
+    "version": "2.12.1",
+    "path": "profiles/desktop/node_modules/d3-sankey/node_modules/d3-array",
+    "license": "BSD-3-Clause",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-array.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-path",
+    "version": "1.0.9",
+    "path": "profiles/desktop/node_modules/d3-sankey/node_modules/d3-path",
+    "license": "BSD-3-Clause",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-path.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-shape",
+    "version": "1.3.7",
+    "path": "profiles/desktop/node_modules/d3-sankey/node_modules/d3-shape",
+    "license": "BSD-3-Clause",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-shape.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "internmap",
+    "version": "1.0.1",
+    "path": "profiles/desktop/node_modules/d3-sankey/node_modules/internmap",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/mbostock/internmap.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-scale",
+    "version": "4.0.3",
+    "path": "profiles/desktop/node_modules/d3-scale",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-scale.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-scale-chromatic",
+    "version": "3.1.1",
+    "path": "profiles/desktop/node_modules/d3-scale-chromatic",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-scale-chromatic.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-selection",
+    "version": "3.0.1",
+    "path": "profiles/desktop/node_modules/d3-selection",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-selection.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-shape",
+    "version": "3.2.1",
+    "path": "profiles/desktop/node_modules/d3-shape",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-shape.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-time",
+    "version": "3.1.1",
+    "path": "profiles/desktop/node_modules/d3-time",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-time.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-time-format",
+    "version": "4.1.1",
+    "path": "profiles/desktop/node_modules/d3-time-format",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-time-format.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-timer",
+    "version": "3.0.2",
+    "path": "profiles/desktop/node_modules/d3-timer",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-timer.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-transition",
+    "version": "3.0.2",
+    "path": "profiles/desktop/node_modules/d3-transition",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-transition.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "d3-zoom",
+    "version": "3.0.1",
+    "path": "profiles/desktop/node_modules/d3-zoom",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/d3/d3-zoom.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "dagre-d3-es",
+    "version": "7.0.14",
+    "path": "profiles/desktop/node_modules/dagre-d3-es",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/tbo47/dagre-es.git"
+    },
+    "licenseFiles": [
+      "LICENSE.md"
+    ]
+  },
+  {
+    "name": "dayjs",
+    "version": "1.11.23",
+    "path": "profiles/desktop/node_modules/dayjs",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/iamkun/dayjs.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "delaunator",
+    "version": "5.1.0",
+    "path": "profiles/desktop/node_modules/delaunator",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/mapbox/delaunator.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "dompurify",
+    "version": "3.4.17",
+    "path": "profiles/desktop/node_modules/dompurify",
+    "license": "(MPL-2.0 OR Apache-2.0)",
+    "repository": {
+      "type": "git",
+      "url": "git://github.com/cure53/DOMPurify.git"
+    },
+    "licenseFiles": [
+      "LICENSE",
+      "LICENSE-MPL",
+      "src/license_header"
+    ]
+  },
+  {
+    "name": "dsh-better-sidebar",
+    "version": "0.30.1",
+    "path": "profiles/desktop/node_modules/dsh-better-sidebar",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/omdsh-dev/DSH-better-sidebar"
+    },
+    "licenseFiles": [
+      "LICENSE",
+      "node_modules/@deepseek-ai/cosmokit/LICENSE",
+      "node_modules/@deepseek-ai/schemastery/LICENSE"
+    ]
+  },
+  {
+    "name": "@deepseek-ai/cosmokit",
+    "version": "1.8.6",
+    "path": "profiles/desktop/node_modules/dsh-better-sidebar/node_modules/@deepseek-ai/cosmokit",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+      "directory": "vendor/cosmokit"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "@deepseek-ai/schemastery",
+    "version": "3.18.5",
+    "path": "profiles/desktop/node_modules/dsh-better-sidebar/node_modules/@deepseek-ai/schemastery",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+      "directory": "vendor/schemastery"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "dsh-computer-use-win",
+    "version": "0.5.5",
+    "path": "profiles/desktop/node_modules/dsh-computer-use-win",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Yu-tao-Li/dsh-computer-use-win.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "dsh-context",
+    "version": "0.83.1",
+    "path": "profiles/desktop/node_modules/dsh-context",
+    "license": "Apache-2.0",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/bowenliang123/dsh-context.git"
+    },
+    "licenseFiles": [
+      "LICENSE",
+      "node_modules/zod/LICENSE"
+    ]
+  },
+  {
+    "name": "zod",
+    "version": "4.4.3",
+    "path": "profiles/desktop/node_modules/dsh-context/node_modules/zod",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/colinhacks/zod.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "dsh-doublecheck",
+    "version": "0.9.30",
+    "path": "profiles/desktop/node_modules/dsh-doublecheck",
+    "license": "Apache-2.0",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/PerryLink/dsh-doublecheck.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "dsh-gemini-voice",
+    "version": "0.3.4",
+    "path": "profiles/desktop/node_modules/dsh-gemini-voice",
+    "license": "MIT",
+    "repository": null,
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "dsh-local-llm-controller",
+    "version": "2.0.4-kvmem.1-official.2",
+    "path": "profiles/desktop/node_modules/dsh-local-llm-controller",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Lbunc/dsh-local-llm-controller.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "dsh-paste-spill",
+    "version": "0.2.0",
+    "path": "profiles/desktop/node_modules/dsh-paste-spill",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/winditer/dsh-paste-spill.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "dsh-suggest-ghost",
+    "version": "0.9.0",
+    "path": "profiles/desktop/node_modules/dsh-suggest-ghost",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/dsh-plugin-collection/dsh-suggest-ghost.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "dsh-voice-notify",
+    "version": "1.0.0",
+    "path": "profiles/desktop/node_modules/dsh-voice-notify",
+    "license": "MIT (local extension; kit distribution)",
+    "repository": null,
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "dsh-voice-router",
+    "version": "0.1.2",
+    "path": "profiles/desktop/node_modules/dsh-voice-router",
+    "license": "MIT",
+    "repository": null,
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "dsh-whale-desktop-integration",
+    "version": "1.1.6",
+    "path": "profiles/desktop/node_modules/dsh-whale-desktop-integration",
+    "license": "MIT (local extension; kit distribution)",
+    "repository": null,
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "es-toolkit",
+    "version": "1.53.2",
+    "path": "profiles/desktop/node_modules/es-toolkit",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/toss/es-toolkit.git"
+    },
+    "licenseFiles": [
+      "LICENSE",
+      "NOTICE"
+    ]
+  },
+  {
+    "name": "fastdom",
+    "version": "1.0.12",
+    "path": "profiles/desktop/node_modules/fastdom",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git://github.com/wilsonpage/fastdom.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "hachure-fill",
+    "version": "0.5.2",
+    "path": "profiles/desktop/node_modules/hachure-fill",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/pshihn/hachure-fill.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "iconv-lite",
+    "version": "0.6.3",
+    "path": "profiles/desktop/node_modules/iconv-lite",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git://github.com/ashtuchkin/iconv-lite.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "import-meta-resolve",
+    "version": "4.2.0",
+    "path": "profiles/desktop/node_modules/import-meta-resolve",
+    "license": "MIT",
+    "repository": "wooorm/import-meta-resolve",
+    "licenseFiles": [
+      "license"
+    ]
+  },
+  {
+    "name": "internmap",
+    "version": "2.0.3",
+    "path": "profiles/desktop/node_modules/internmap",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/mbostock/internmap.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "katex",
+    "version": "0.16.47",
+    "path": "profiles/desktop/node_modules/katex",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/KaTeX/KaTeX.git"
+    },
+    "licenseFiles": [
+      "LICENSE",
+      "node_modules/commander/LICENSE"
+    ]
+  },
+  {
+    "name": "commander",
+    "version": "8.3.0",
+    "path": "profiles/desktop/node_modules/katex/node_modules/commander",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/tj/commander.js.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "khroma",
+    "version": "2.1.0",
+    "path": "profiles/desktop/node_modules/khroma",
+    "license": "MIT (local extension; kit distribution)",
+    "repository": "github:fabiospampinato/khroma",
+    "licenseFiles": [
+      "license"
+    ]
+  },
+  {
+    "name": "lodash-es",
+    "version": "4.18.1",
+    "path": "profiles/desktop/node_modules/lodash-es",
+    "license": "MIT",
+    "repository": "lodash/lodash",
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "marked",
+    "version": "16.4.2",
+    "path": "profiles/desktop/node_modules/marked",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git://github.com/markedjs/marked.git"
+    },
+    "licenseFiles": [
+      "LICENSE.md"
+    ]
+  },
+  {
+    "name": "mermaid",
+    "version": "11.17.2",
+    "path": "profiles/desktop/node_modules/mermaid",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/mermaid-js/mermaid"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "package-manager-detector",
+    "version": "1.9.0",
+    "path": "profiles/desktop/node_modules/package-manager-detector",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/antfu-collective/package-manager-detector.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "path-data-parser",
+    "version": "0.1.0",
+    "path": "profiles/desktop/node_modules/path-data-parser",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/pshihn/path-data-parser.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "points-on-curve",
+    "version": "0.2.0",
+    "path": "profiles/desktop/node_modules/points-on-curve",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/pshihn/bezier-points.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "points-on-path",
+    "version": "0.2.1",
+    "path": "profiles/desktop/node_modules/points-on-path",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/pshihn/points-on-path.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "react-icons",
+    "version": "5.7.0",
+    "path": "profiles/desktop/node_modules/react-icons",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+ssh://git@github.com:react-icons/react-icons.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "robust-predicates",
+    "version": "3.0.3",
+    "path": "profiles/desktop/node_modules/robust-predicates",
+    "license": "Unlicense",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/mourner/robust-predicates.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "roughjs",
+    "version": "4.6.6",
+    "path": "profiles/desktop/node_modules/roughjs",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/pshihn/rough.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "rw",
+    "version": "1.3.3",
+    "path": "profiles/desktop/node_modules/rw",
+    "license": "BSD-3-Clause",
+    "repository": {
+      "type": "git",
+      "url": "http://github.com/mbostock/rw.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "rxjs",
+    "version": "7.8.2",
+    "path": "profiles/desktop/node_modules/rxjs",
+    "license": "Apache-2.0",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/reactivex/rxjs.git"
+    },
+    "licenseFiles": [
+      "LICENSE.txt"
+    ]
+  },
+  {
+    "name": "safer-buffer",
+    "version": "2.1.2",
+    "path": "profiles/desktop/node_modules/safer-buffer",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/ChALkeR/safer-buffer.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "strictdom",
+    "version": "1.0.1",
+    "path": "profiles/desktop/node_modules/strictdom",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git://github.com/wilsonpage/strictdom.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "style-mod",
+    "version": "4.1.4",
+    "path": "profiles/desktop/node_modules/style-mod",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://code.haverbeke.berlin/marijn/style-mod.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "stylis",
+    "version": "4.4.0",
+    "path": "profiles/desktop/node_modules/stylis",
+    "license": "MIT",
+    "repository": "https://github.com/thysultan/stylis.js",
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "superpowers-dsh",
+    "version": "0.5.0",
+    "path": "profiles/desktop/node_modules/superpowers-dsh",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/LayneChai/superpowers-dsh.git"
+    },
+    "licenseFiles": [
+      "LICENSE-upstream",
+      "NOTICE-env-kit.txt"
+    ]
+  },
+  {
+    "name": "tinyexec",
+    "version": "1.3.1",
+    "path": "profiles/desktop/node_modules/tinyexec",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/tinylibs/tinyexec.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "ts-dedent",
+    "version": "2.3.0",
+    "path": "profiles/desktop/node_modules/ts-dedent",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/tamino-martinius/node-ts-dedent.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "tslib",
+    "version": "2.9.1",
+    "path": "profiles/desktop/node_modules/tslib",
+    "license": "0BSD",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Microsoft/tslib.git"
+    },
+    "licenseFiles": [
+      "LICENSE.txt"
+    ]
+  },
+  {
+    "name": "uuid",
+    "version": "14.0.3",
+    "path": "profiles/desktop/node_modules/uuid",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/uuidjs/uuid.git"
+    },
+    "licenseFiles": [
+      "LICENSE.md"
+    ]
+  },
+  {
+    "name": "w3c-keyname",
+    "version": "2.2.8",
+    "path": "profiles/desktop/node_modules/w3c-keyname",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/marijnh/w3c-keyname.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "whale-girl",
+    "version": "0.2.3",
+    "path": "profiles/desktop/node_modules/whale-girl",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/vlln/whale-girl.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "ws",
+    "version": "8.22.1",
+    "path": "profiles/desktop/node_modules/ws",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/websockets/ws.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "yaml",
+    "version": "2.9.1",
+    "path": "profiles/desktop/node_modules/yaml",
+    "license": "ISC",
+    "repository": "github:eemeli/yaml",
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "zod",
+    "version": "4.6.7",
+    "path": "profiles/desktop/node_modules/zod",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/colinhacks/zod.git"
+    },
+    "licenseFiles": [
+      "LICENSE"
+    ]
+  }
+]

@@ -1,0 +1,153 @@
+{
+  "date": "2026-11-10",
+  "hostVersion": "0.2.2-rc.1",
+  "testMode": "isolated homes on one Windows x64 machine, not a second physical computer",
+  "payloadAudit": {
+    "files": 13257,
+    "topLevelPlugins": 13,
+    "productionPackages": 186,
+    "passed": true
+  },
+  "frontendAndNotificationAssertions": {
+    "count": 15,
+    "passed": true
+  },
+  "freshRuntime": {
+    "plugins": [
+      {
+        "name": "dsh-better-sidebar",
+        "active": true
+      },
+      {
+        "name": "dsh-computer-use-win",
+        "active": true
+      },
+      {
+        "name": "dsh-context",
+        "active": true
+      },
+      {
+        "name": "dsh-doublecheck",
+        "active": true
+      },
+      {
+        "name": "dsh-gemini-voice",
+        "active": true
+      },
+      {
+        "name": "dsh-local-llm-controller",
+        "active": true
+      },
+      {
+        "name": "dsh-paste-spill",
+        "active": true
+      },
+      {
+        "name": "dsh-suggest-ghost",
+        "active": true
+      },
+      {
+        "name": "dsh-voice-notify",
+        "active": true
+      },
+      {
+        "name": "dsh-voice-router",
+        "active": true
+      },
+      {
+        "name": "dsh-whale-desktop-integration",
+        "active": true
+      },
+      {
+        "name": "superpowers-dsh",
+        "active": true
+      },
+      {
+        "name": "whale-girl",
+        "active": true
+      }
+    ],
+    "voiceKeyConfigured": false,
+    "geminiKeyConfigured": false,
+    "petRunning": true,
+    "petError": ""
+  },
+  "repeatInstall": {
+    "passed": true,
+    "settingsPreserved": true
+  },
+  "negativeTests": [
+    {
+      "case": "Install-DSHKit: not owned by this kit",
+      "passed": true,
+      "exitCode": 1
+    },
+    {
+      "case": "Install-DSHKit: executable not found",
+      "passed": true,
+      "exitCode": 1
+    },
+    {
+      "case": "Install-DSHKit: requires DSH",
+      "passed": true,
+      "exitCode": 1
+    },
+    {
+      "case": "Install-DSHKit: Checksum mismatch",
+      "passed": true,
+      "exitCode": 1
+    },
+    {
+      "case": "zip-safety: Unsafe archive path",
+      "passed": true,
+      "exitCode": 1
+    }
+  ],
+  "runningInstanceRollbackRefused": true,
+  "localModel": {
+    "freshProviderRegistration": true,
+    "providerKey": "dsh-local",
+    "modelCount": 1,
+    "started": true,
+    "inferenceText": "391",
+    "inferencePassed": true,
+    "portClosed": true,
+    "stopped": true
+  },
+  "restoreCopy": {
+    "copiedFilesChecked": 13462,
+    "changedFiles": [],
+    "backupRetained": true,
+    "originalTestHomeAbsent": true,
+    "passed": true
+  },
+  "restoredRuntime": {
+    "passed": true,
+    "activePlugins": 13,
+    "customFontSizePreserved": true,
+    "localProviderPreserved": true,
+    "controllerStopped": true,
+    "desktopPetRunning": true,
+    "desktopPetError": ""
+  },
+  "preservation": {
+    "filesChecked": 16330,
+    "authorizedPhysicalFilesChanged": 3,
+    "unexpectedChanges": 0,
+    "existingBackupsRetained": true
+  },
+  "knownPrivateSecretScan": {
+    "knownPrivateSecretsChecked": 2,
+    "matches": [],
+    "passed": true
+  },
+  "isolatedInstancesStopped": true,
+  "notTested": [
+    "second physical machine",
+    "new machine GPU/driver compatibility",
+    "live microphone transcription",
+    "paid cloud inference",
+    "speaker playback"
+  ],
+  "onlineValidation": "https://github.com/SparklingAstronaut/dsh-env-kit/actions/workflows/verify.yml"
+}

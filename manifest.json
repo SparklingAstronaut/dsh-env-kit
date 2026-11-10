@@ -1,0 +1,102 @@
+{
+  "format": 1,
+  "version": "1.0.0",
+  "hostVersion": "0.2.2-rc.1",
+  "platform": "win32-x64",
+  "payload": {
+    "file": "vendor/plugins-win-x64.zip",
+    "sha256": "0213ad11f3d1e91aef97c379757441ff0e52fd7393fd153d4c8ffc689d562141"
+  },
+  "plugins": [
+    {
+      "name": "dsh-better-sidebar",
+      "version": "0.30.1"
+    },
+    {
+      "name": "dsh-computer-use-win",
+      "version": "0.5.5"
+    },
+    {
+      "name": "dsh-context",
+      "version": "0.83.1"
+    },
+    {
+      "name": "dsh-doublecheck",
+      "version": "0.9.30"
+    },
+    {
+      "name": "dsh-gemini-voice",
+      "version": "0.3.4"
+    },
+    {
+      "name": "dsh-local-llm-controller",
+      "version": "2.0.4-kvmem.1-official.2"
+    },
+    {
+      "name": "dsh-paste-spill",
+      "version": "0.2.0"
+    },
+    {
+      "name": "dsh-suggest-ghost",
+      "version": "0.9.0"
+    },
+    {
+      "name": "dsh-voice-notify",
+      "version": "1.0.0"
+    },
+    {
+      "name": "dsh-voice-router",
+      "version": "0.1.2"
+    },
+    {
+      "name": "dsh-whale-desktop-integration",
+      "version": "1.1.6"
+    },
+    {
+      "name": "superpowers-dsh",
+      "version": "0.5.0"
+    },
+    {
+      "name": "whale-girl",
+      "version": "0.2.3"
+    }
+  ],
+  "bundles": [
+    "@deepseek-ai/dsh-base",
+    "@deepseek-ai/dsh-web-app",
+    "whale-girl",
+    "@deepseek-ai/dsh-experimental-voice-input-bundle",
+    "@deepseek-ai/dsh-experimental-auto-review",
+    "@deepseek-ai/dsh-experimental-agent-team-profile",
+    "@deepseek-ai/dsh-experimental-inspector-profile",
+    "dsh-paste-spill",
+    "dsh-whale-desktop-integration",
+    "dsh-gemini-voice",
+    "dsh-voice-router",
+    "dsh-voice-notify",
+    "dsh-doublecheck",
+    "superpowers-dsh",
+    "dsh-computer-use-win",
+    "dsh-suggest-ghost",
+    "dsh-better-sidebar",
+    "dsh-context",
+    "dsh-local-llm-controller"
+  ],
+  "patchedFiles": [
+    "dsh-computer-use-win/mcp/client.js",
+    "dsh-gemini-voice/client.js",
+    "dsh-gemini-voice/index.mjs",
+    "dsh-gemini-voice/storage.mjs",
+    "dsh-local-llm-controller/lib/client.js",
+    "dsh-local-llm-controller/lib/host-imports.mjs",
+    "dsh-local-llm-controller/lib/index.js",
+    "dsh-voice-notify/index.js",
+    "dsh-voice-router/index.mjs",
+    "dsh-whale-desktop-integration/index.mjs"
+  ],
+  "companion": {
+    "version": "45.1.0",
+    "url": "https://github.com/electron/electron/releases/download/v45.1.0/electron-v45.1.0-win32-x64.zip",
+    "sha256": "55eaba17abff7b5bba6c3bbc85068967379024fe742fe9c7fdba9118922ccbe2"
+  }
+}

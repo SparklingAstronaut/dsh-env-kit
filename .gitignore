@@ -1,0 +1,8 @@
+work/
+*.log
+*.retained-*/
+*.staging-*/
+.env*
+!.env.example
+DSH-home/
+electron-v*-win32-x64.zip
