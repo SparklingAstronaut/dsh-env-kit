@@ -1,5 +1,12 @@
 # DSH Environment Kit
 
+> [!WARNING]
+> **普通账号密码登录尚未修复（2026-11-11）**
+>
+> 本套件包含的 **dsh-deepseek-chat 0.2.22 修复候选**已收到问题反馈：普通账号密码登录提交后出现空白页面或错误。Google 登录并返回 DeepSeek 聊天已有实测确认，**不代表其他登录方式也正常**。
+>
+> 普通账号密码登录的失败现场仍待复现，根因尚未确认；目前不能判断是原插件已有问题还是 Google 修复引入的回归。**请勿将“Google 登录修复”理解为所有登录方式均已修复。** 此说明适用于 1.0.1 标准包和完整离线包中的网页聊天插件。详见 [已知问题反馈](https://github.com/xingxingbk-git/dsh-deepseek-chat/pull/18#issuecomment-6772359887)。
+
 [![Verify portable kit](https://github.com/SparklingAstronaut/dsh-env-kit/actions/workflows/verify.yml/badge.svg)](https://github.com/SparklingAstronaut/dsh-env-kit/actions/workflows/verify.yml)
 
 一次装好 14 个 DSH 插件，换电脑也能恢复。**下载、安装、密钥申请、本地模型和 AI 提示词都在本页，按顺序操作即可。**
