@@ -27,7 +27,7 @@ $null = New-Item -ItemType Directory -Path $parent -Force
 $stage = Join-Path $parent ((Split-Path $DshHome -Leaf) + '.staging-' + [guid]::NewGuid().ToString('N'))
 try {
     Expand-SafeZip $archive $stage
-    Test-Payload $stage
+    Test-Payload $stage -Pristine
     if (-not $SkipDesktopPet) {
         if (-not $ElectronArchive) {
             $ElectronArchive = $stage + '.electron.zip'

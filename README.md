@@ -5,7 +5,7 @@
 >
 > 本套件包含的 **dsh-deepseek-chat 0.2.22 修复候选**已收到问题反馈：普通账号密码登录提交后出现空白页面或错误。Google 登录并返回 DeepSeek 聊天已有实测确认，**不代表其他登录方式也正常**。
 >
-> 普通账号密码登录的失败现场仍待复现，根因尚未确认；目前不能判断是原插件已有问题还是 Google 修复引入的回归。**请勿将“Google 登录修复”理解为所有登录方式均已修复。** 此说明适用于 1.0.1 标准包和完整离线包中的网页聊天插件。详见 [已知问题反馈](https://github.com/xingxingbk-git/dsh-deepseek-chat/pull/18#issuecomment-6772359887)。
+> 普通账号密码登录的失败现场仍待复现，根因尚未确认；目前不能判断是原插件已有问题还是 Google 修复引入的回归。**请勿将“Google 登录修复”理解为所有登录方式均已修复。** 此说明适用于 1.0.1、1.0.2 标准包和完整离线包中的网页聊天插件。详见 [已知问题反馈](https://github.com/xingxingbk-git/dsh-deepseek-chat/pull/18#issuecomment-6772359887)。
 
 [![Verify portable kit](https://github.com/SparklingAstronaut/dsh-env-kit/actions/workflows/verify.yml/badge.svg)](https://github.com/SparklingAstronaut/dsh-env-kit/actions/workflows/verify.yml)
 
@@ -13,14 +13,16 @@
 
 适用：**Windows x64 · 官方 DSH 0.2.2-rc.1 · PowerShell 7**。套件不包含账号、密钥、聊天记录、模型或推理程序。
 
-**1.0.1 新增 CHAT / HARNESS 网页聊天插件及 Google 登录修复，并固定为本地修复包。** 等原作者发布包含 [PR #18](https://github.com/xingxingbk-git/dsh-deepseek-chat/pull/18) 的正式版本后，再手动切回官方安装来源。当前不会自动解除固定。已有 1.0.0 的用户请保留旧套件和备份，新版使用新数据目录；不要用新版恢复旧版本套件的备份。
+**1.0.2 修复语音栏目重复图标，固定猜字无发光补丁，并同步安装来源。** 语音使用正式发布的 0.3.7，源文件与独立发布包一致。全部 14 个内置插件保存为随包携带、带校验值的相对路径安装包，并附依赖锁定文件；新增、卸载其他插件时，包管理器可恢复原来的修复内容。新增插件后可启动及同版本换路径恢复。内置插件的来源、版本或文件发生漂移仍会被校验拒绝；常规自动更新不会替换这些固定包，升级内置插件需使用经过验证的新套件或主动迁移来源。
+
+1.0.1 新增 CHAT / HARNESS 网页聊天插件及 Google 登录修复，并固定为本地修复包。 等原作者发布包含 [PR #18](https://github.com/xingxingbk-git/dsh-deepseek-chat/pull/18) 的正式版本后，再手动切回官方安装来源。当前不会自动解除固定。已有 1.0.0/1.0.1 的用户请保留旧套件和备份，新版使用新数据目录；不要用新版恢复旧版本套件的备份。
 
 想让 AI 代劳？直接复制本页的 [AI 安装提示词](#ai-prompt)。
 
 <a id="install"></a>
 ## 1. 下载并准备
 
-**[点击下载完整离线包](https://github.com/SparklingAstronaut/dsh-env-kit/releases/download/v1.0.1/dsh-env-kit-1.0.1-offline-win-x64.zip)**
+**[点击下载完整离线包](https://github.com/SparklingAstronaut/dsh-env-kit/releases/download/v1.0.2/dsh-env-kit-1.0.2-offline-win-x64.zip)**
 
 整个解压，保留里面 `dsh-env-kit` 文件夹和 `electron-v45.1.0-win32-x64.zip` 的相对位置；Electron ZIP 不用手动解压。只需这个套件包，不用再下载标准包或 “Source code”。
 
@@ -159,7 +161,7 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File .\scripts\Restore-DSHKit.ps1 `
 | dsh-computer-use-win | 0.5.5 | Windows 电脑操控 |
 | dsh-deepseek-chat | 0.2.22 修复候选（本地固定） | CHAT / HARNESS 切换、Google 登录；凭据由用户自行登录 |
 | dsh-doublecheck | 0.9.30 | 工程检查与验收记录 |
-| dsh-gemini-voice | 0.3.4 | Gemini 语音识别 |
+| dsh-gemini-voice | 0.3.7 | Gemini 语音识别 |
 | dsh-voice-router | 0.1.2 | Gemini / 云端 API / 本地语音路由 |
 | dsh-voice-notify | 1.0.0 | 任务结束语音提醒 |
 | dsh-local-llm-controller | 2.0.4-kvmem.1-official.2 | 启停、配置本地推理服务 |
@@ -169,7 +171,7 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File .\scripts\Restore-DSHKit.ps1 `
 | superpowers-dsh | 0.5.0 | 工程工作流技能 |
 | whale-girl | 0.2.3 | 网页宠物 |
 
-上述版本是来源包版本。便携修复按文件哈希锁定，详情见 [变更说明](docs/portability.md)。未加入 image-gen、AnySearch、ego-browser 或 prompt-history。
+上述版本是来源包版本。14 个插件的实际安装包与来源保存在 manifest 中，便携修复按文件哈希锁定，详情见 [变更说明](docs/portability.md)。未加入 image-gen、AnySearch、ego-browser 或 prompt-history。
 
 另含中文默认设置和 `anima-prompt`、`qwen-prompt`、`story` 三个提示词技能，不安装图片生成器。桌宠数据归属于新 home。
 
@@ -178,8 +180,8 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File .\scripts\Restore-DSHKit.ps1 `
 <details>
 <summary>校验、回滚与其他下载方式（一般安装不需要看）</summary>
 
-- [Release 下载页](https://github.com/SparklingAstronaut/dsh-env-kit/releases/tag/v1.0.1) · [SHA-256 校验清单](https://github.com/SparklingAstronaut/dsh-env-kit/releases/download/v1.0.1/dsh-env-kit-1.0.1-SHA256SUMS.txt)。可用 `Get-FileHash .\dsh-env-kit-1.0.1-offline-win-x64.zip -Algorithm SHA256` 核对同名文件的值。
-- [标准包](https://github.com/SparklingAstronaut/dsh-env-kit/releases/download/v1.0.1/dsh-env-kit-1.0.1.zip) 不带 Electron；安装时省略 `-ElectronArchive` 会从官方源下载固定桌宠组件并校验。`-SkipDesktopPet` 可跳过桌面组件，但不属于完整桌宠恢复。
+- [Release 下载页](https://github.com/SparklingAstronaut/dsh-env-kit/releases/tag/v1.0.2) · [SHA-256 校验清单](https://github.com/SparklingAstronaut/dsh-env-kit/releases/download/v1.0.2/dsh-env-kit-1.0.2-SHA256SUMS.txt)。可用 `Get-FileHash .\dsh-env-kit-1.0.2-offline-win-x64.zip -Algorithm SHA256` 核对同名文件的值。
+- [标准包](https://github.com/SparklingAstronaut/dsh-env-kit/releases/download/v1.0.2/dsh-env-kit-1.0.2.zip) 不带 Electron；安装时省略 `-ElectronArchive` 会从官方源下载固定桌宠组件并校验。`-SkipDesktopPet` 可跳过桌面组件，但不属于完整桌宠恢复。
 - 重复安装同版本套件会校验文件并保留设置；插件文件被修改时会报错，不会悄悄覆盖。
 - 需要回滚时，关闭这个套件实例，再在套件文件夹运行：
 
@@ -195,11 +197,11 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File .\scripts\Rollback-DSHKit.ps1 `
 <details>
 <summary>开发与发布记录</summary>
 
-插件和 188 个生产依赖包固定在 `vendor/plugins-win-x64.zip`，安装不运行 npm/pnpm；文件清单在 `payload-files.json`。便携修复按哈希锁定。Google 登录修复额外使用本地安装包固定来源，DSH 常规更新会跳过它；其他插件更新仍可能覆盖各自的本地补丁。
+包含 14 个插件的 188 个生产包固定在 `vendor/plugins-win-x64.zip`，安装不运行 npm/pnpm；文件清单在 `payload-files.json`。便携修复按哈希锁定。全部 14 个内置插件使用本地安装包固定来源，DSH 常规更新会跳过它们。新增插件可正常管理；升级内置插件需要主动更换来源并重新验收。
 
 仓库仅包含**本套件的公开文件**。插件压缩包约 68 MiB；包含 Electron 的完整离线包放在 Release，不放进 Git 历史。不要把安装后的 DSH home、私有备份、日志或测试工作目录一起发布。
 
-`python tests/audit.py` 检查文件清单、哈希、本地固定包及其安装内容、敏感路径和密钥特征；`node tests/contracts.mjs <已安装的home>` 检查菜单图标和通知逻辑。线上运行结果见 [GitHub Actions](https://github.com/SparklingAstronaut/dsh-env-kit/actions/workflows/verify.yml)，本地验收与线上结果分别记录。
+`python tests/audit.py` 检查文件清单、哈希、本地固定包及其安装内容、敏感路径和密钥特征；`node tests/contracts.mjs <已安装的home>` 检查菜单图标和通知逻辑；`tests/package-operations.ps1` 实际执行新增、卸载、空目录重装，并验证旧来源及文件篡改被拒绝。线上运行结果见 [GitHub Actions](https://github.com/SparklingAstronaut/dsh-env-kit/actions/workflows/verify.yml)，本地验收与线上结果分别记录。
 
 实际执行结果和限制见 [验收记录](docs/verification.md)。许可、来源和本地补丁归属见 [第三方说明](THIRD_PARTY_NOTICES.md) 与 `third-party.json`。
 

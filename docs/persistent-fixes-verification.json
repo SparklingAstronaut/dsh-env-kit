@@ -1,0 +1,22 @@
+{
+  "kitVersion": "1.0.2",
+  "voiceVersion": "0.3.7",
+  "hostVersion": "0.2.2-rc.1",
+  "pinnedPlugins": 14,
+  "payloadFiles": 14155,
+  "voiceUnitTests": 30,
+  "pluginContractChecks": 15,
+  "realHostInstall": {
+    "package": "dsh-prompt-history",
+    "version": "1.11.2",
+    "application": "applied"
+  },
+  "realHostRemoveAfterRelocation": "applied",
+  "voiceVisibleIconsAfterOperations": 1,
+  "ghostBrowserTextShadow": "none",
+  "packageAddRemoveCleanReinstallAndRelocation": "passed",
+  "tamperRejection": "passed",
+  "freshVoiceUnconfigured": true,
+  "testProcessesStopped": true,
+  "scope": "isolated homes on one Windows machine; no new paid inference, real-microphone, login or model test"
+}

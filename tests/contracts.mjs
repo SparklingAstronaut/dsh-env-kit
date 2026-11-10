@@ -46,5 +46,5 @@ assert.equal(spoken,1);checks++;
 const ghost=fs.readFileSync(path.join(modules,'dsh-suggest-ghost','lib','client.js'),'utf8');
 assert.match(ghost,/text-shadow\s*:\s*none/);checks++;
 const storage=await import(pathToFileURL(path.join(modules,'dsh-gemini-voice','storage.mjs')));
-assert.equal(storage.configDirectory('win32',{DSH_HOME:home},'unused'),path.join(home,'gemini-voice'));checks++;
+assert.equal(storage.configDirectory('win32',{DSH_HOME:home,DSH_GEMINI_VOICE_HOME:path.join(home,'gemini-voice')},'unused'),path.join(home,'gemini-voice'));checks++;
 console.log(JSON.stringify({passed:true,checks,coverage:['plain navigation labels','official icon slots','completion speech de-duplication','no-glow Ghost patch']}));

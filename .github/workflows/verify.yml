@@ -11,6 +11,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - uses: pnpm/action-setup@v4
+        with:
+          version: '11.28.5'
       - name: Validate payload, secrets and paths
         run: python tests/audit.py
       - name: Extract isolated fixture
@@ -19,3 +22,6 @@ jobs:
       - name: Exercise frontend and notification contracts
         shell: pwsh
         run: node tests/contracts.mjs "$env:RUNNER_TEMP\kit-home"
+      - name: Add and remove another package, then restore from an empty directory
+        shell: pwsh
+        run: ./tests/package-operations.ps1 -DshHome "$env:RUNNER_TEMP\kit-home"

@@ -74,21 +74,42 @@ function Expand-SafeZip([string]$Archive,[string]$Destination) {
         [IO.Compression.ZipFileExtensions]::ExtractToDirectory($zip,$Destination)
     } finally { $zip.Dispose() }
 }
-function Test-Payload([string]$DshHome) {
+function Test-Payload([string]$DshHome, [switch]$Pristine) {
     $inventory = Read-Json (Join-Path $script:KitRoot 'payload-files.json')
     foreach ($entry in $inventory.PSObject.Properties) {
         # The app owns this one settings document after first launch.
         if ($entry.Name -eq 'profiles/desktop/cordis.patch.yml') { continue }
+        # pnpm owns the dependency layout and lockfile after plugin operations.
+        # Verify release extraction in full; at runtime verify pinned package
+        # contents below, independent of dependency hoisting and added plugins.
+        if (-not $Pristine -and ($entry.Name -in @('profiles/desktop/package.json','profiles/desktop/pnpm-lock.yaml') -or $entry.Name.StartsWith('profiles/desktop/node_modules/'))) { continue }
         Assert-Hash (Join-Path $DshHome $entry.Name) $entry.Value
     }
     $manifest = Read-Json (Join-Path $script:KitRoot 'manifest.json')
     $profile = Read-Json (Join-Path $DshHome 'profiles\desktop\package.json')
-    if (@($profile.dependencies.PSObject.Properties).Count -ne @($manifest.plugins).Count) { throw 'Unexpected plugin composition.' }
+    if ($Pristine -and @($profile.dependencies.PSObject.Properties).Count -ne @($manifest.plugins).Count) { throw 'Unexpected plugin composition.' }
     foreach ($plugin in $manifest.plugins) {
         $source = $plugin.PSObject.Properties['source']
         $expected = if ($source) { $source.Value } else { $plugin.version }
-        if ($profile.dependencies.($plugin.name) -ne $expected) { throw 'Plugin declaration drift.' }
+        if ($profile.dependencies.($plugin.name).Replace('file:./','file:') -ne $expected.Replace('file:./','file:')) { throw "Plugin declaration drift: $($plugin.name). Restore its versioned archive source." }
         $installed = Read-Json (Join-Path $DshHome "profiles/desktop/node_modules/$($plugin.name)/package.json")
         if ($installed.version -ne $plugin.version) { throw 'Installed plugin version drift.' }
+        if (-not $Pristine) {
+            $prefix = "profiles/desktop/node_modules/$($plugin.name)/"
+            foreach ($entry in $inventory.PSObject.Properties) {
+                if ($entry.Name.StartsWith($prefix) -and -not $entry.Name.Substring($prefix.Length).StartsWith('node_modules/')) {
+                    Assert-Hash (Join-Path $DshHome $entry.Name) $entry.Value
+                }
+            }
+        }
+    }
+}
+function Reset-PackageManagerState([string]$DshHome) {
+    # A hoisted tree contains real files, but pnpm records absolute paths to
+    # the old virtual/content stores. Let pnpm rebuild its metadata from the
+    # portable manifest, lockfile and pinned archives on the next operation.
+    foreach ($name in @('.modules.yaml','.pnpm-workspace-state-v1.json')) {
+        $file = Join-Path $DshHome "profiles/desktop/node_modules/$name"
+        if (Test-Path -LiteralPath $file -PathType Leaf) { Remove-Item -LiteralPath $file }
     }
 }

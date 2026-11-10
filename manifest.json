@@ -1,24 +1,33 @@
 {
   "format": 1,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "hostVersion": "0.2.2-rc.1",
   "platform": "win32-x64",
   "payload": {
     "file": "vendor/plugins-win-x64.zip",
-    "sha256": "c2dcd1090e350c369ba9726c13011b8bb490061c178db450e1f4db951e413d3f"
+    "sha256": "7f089df60e4f341e251863e0937b6cc14b0b718644b6945c65acbc2409ce3637"
   },
   "plugins": [
     {
       "name": "dsh-better-sidebar",
-      "version": "0.30.1"
+      "version": "0.30.1",
+      "source": "file:./pinned-packages/dsh-better-sidebar-0.30.1-kit-1.0.2.tgz",
+      "sha256": "26baa368888e1dc8cc2016dd07b02f6b3196b29fcb87106f6d7a0473db4bc3b9",
+      "updatePolicy": "manual-versioned-archive"
     },
     {
       "name": "dsh-computer-use-win",
-      "version": "0.5.5"
+      "version": "0.5.5",
+      "source": "file:./pinned-packages/dsh-computer-use-win-0.5.5-kit-1.0.2.tgz",
+      "sha256": "3f86116bcb5176d7384786faa01111939d71f6893dcb3c7b7c282e46f918d129",
+      "updatePolicy": "manual-versioned-archive"
     },
     {
       "name": "dsh-context",
-      "version": "0.83.1"
+      "version": "0.83.1",
+      "source": "file:./pinned-packages/dsh-context-0.83.1-kit-1.0.2.tgz",
+      "sha256": "edb0d873284b365f877622420e5d9169f5fe2bb19ff87115887eb490ad8b57f1",
+      "updatePolicy": "manual-versioned-archive"
     },
     {
       "name": "dsh-deepseek-chat",
@@ -32,43 +41,76 @@
     },
     {
       "name": "dsh-doublecheck",
-      "version": "0.9.30"
+      "version": "0.9.30",
+      "source": "file:./pinned-packages/dsh-doublecheck-0.9.30-kit-1.0.2.tgz",
+      "sha256": "4b1e2c70859982cfce26f972b02bfda0708dd38b322dbe1a2ad2ac042681383e",
+      "updatePolicy": "manual-versioned-archive"
     },
     {
       "name": "dsh-gemini-voice",
-      "version": "0.3.4"
+      "version": "0.3.7",
+      "repository": "https://github.com/SparklingAstronaut/dsh-gemini-voice",
+      "release": "v0.3.7",
+      "source": "file:./pinned-packages/dsh-gemini-voice-0.3.7.tgz",
+      "sha256": "fa96c238fa3a73bda3f1b6170947c483df2118b578ec34dc9583199a58163b53",
+      "updatePolicy": "manual-versioned-archive",
+      "commit": "186996f6e4cbf27d36580b5576b03153556a8e71"
     },
     {
       "name": "dsh-local-llm-controller",
-      "version": "2.0.4-kvmem.1-official.2"
+      "version": "2.0.4-kvmem.1-official.2",
+      "source": "file:./pinned-packages/dsh-local-llm-controller-2.0.4-kvmem.1-official.2-kit-1.0.2.tgz",
+      "sha256": "c962fb4460fa88c636e469780afc7abbf0ec059b6d330eb302b4868479f48625",
+      "updatePolicy": "manual-versioned-archive"
     },
     {
       "name": "dsh-paste-spill",
-      "version": "0.2.0"
+      "version": "0.2.0",
+      "source": "file:./pinned-packages/dsh-paste-spill-0.2.0-kit-1.0.2.tgz",
+      "sha256": "1f033789ba33df4ef2920a8e7fcc1aa7bbd7976e95115f7457976da8ea4e7706",
+      "updatePolicy": "manual-versioned-archive"
     },
     {
       "name": "dsh-suggest-ghost",
-      "version": "0.9.0"
+      "version": "0.9.0",
+      "source": "file:./pinned-packages/dsh-suggest-ghost-0.9.0-kit-1.0.2.tgz",
+      "sha256": "af85386a689528d2c71280198f4ee19fc17ec7b29fa2d99e32bf392b2a4bb366",
+      "updatePolicy": "manual-versioned-archive"
     },
     {
       "name": "dsh-voice-notify",
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "source": "file:./pinned-packages/dsh-voice-notify-1.0.0-kit-1.0.2.tgz",
+      "sha256": "a8fde6d1799fbcf3366a15603a1c3443613eca597cef582e035e86e01f927f21",
+      "updatePolicy": "manual-versioned-archive"
     },
     {
       "name": "dsh-voice-router",
-      "version": "0.1.2"
+      "version": "0.1.2",
+      "source": "file:./pinned-packages/dsh-voice-router-0.1.2-kit-1.0.2.tgz",
+      "sha256": "b409cbc01d7e52e97567b4e6fa7782c6b8912cf55d4e4ba7b756e12c5c95ceab",
+      "updatePolicy": "manual-versioned-archive"
     },
     {
       "name": "dsh-whale-desktop-integration",
-      "version": "1.1.6"
+      "version": "1.1.6",
+      "source": "file:./pinned-packages/dsh-whale-desktop-integration-1.1.6-kit-1.0.2.tgz",
+      "sha256": "3b36601df98b6bbeeb97992b933d44d548e1493032e1a38976e6daff7ce02f87",
+      "updatePolicy": "manual-versioned-archive"
     },
     {
       "name": "superpowers-dsh",
-      "version": "0.5.0"
+      "version": "0.5.0",
+      "source": "file:./pinned-packages/superpowers-dsh-0.5.0-kit-1.0.2.tgz",
+      "sha256": "adbdb0445996be41da5041fa1b2e1000dbb705831aa565c2fd6893c2ca78bc18",
+      "updatePolicy": "manual-versioned-archive"
     },
     {
       "name": "whale-girl",
-      "version": "0.2.3"
+      "version": "0.2.3",
+      "source": "file:./pinned-packages/whale-girl-0.2.3-kit-1.0.2.tgz",
+      "sha256": "6714c0a27a91a25ba390d076604671e8575c8b5af84ee03ca43cd5461e81ede6",
+      "updatePolicy": "manual-versioned-archive"
     }
   ],
   "bundles": [
@@ -95,9 +137,6 @@
   ],
   "patchedFiles": [
     "dsh-computer-use-win/mcp/client.js",
-    "dsh-gemini-voice/client.js",
-    "dsh-gemini-voice/index.mjs",
-    "dsh-gemini-voice/storage.mjs",
     "dsh-local-llm-controller/lib/client.js",
     "dsh-local-llm-controller/lib/host-imports.mjs",
     "dsh-local-llm-controller/lib/index.js",

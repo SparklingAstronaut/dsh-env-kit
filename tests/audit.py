@@ -35,6 +35,7 @@ with zipfile.ZipFile(archive) as z:
         assert profile['dependencies'][name]==source
         installed_root='profiles/desktop/node_modules/'+name+'/'
         assert json.loads(z.read(installed_root+'package.json'))['version']==plugin['version']
+        assert 'source' in plugin, 'Every shipped plugin must be reproducible from its local archive'
         if 'source' in plugin:
             # Only a checked-in, relative, immutable tarball is allowed as a pin.
             assert source.startswith('file:./pinned-packages/')
@@ -50,6 +51,10 @@ with zipfile.ZipFile(archive) as z:
                         assert t.extractfile(item).read()==z.read(installed_root+item.name[len('package/'):]),item.name
         else:
             assert re.fullmatch(r'\d+\.\d+\.\d+(?:[-+][\w.-]+)?',source),source
+    assert profile['dshEnvKit']['version']==manifest['version']
+    assert 'profiles/desktop/pnpm-lock.yaml' in actual
+    voice=next(p for p in manifest['plugins'] if p['name']=='dsh-gemini-voice')
+    assert voice['version']=='0.3.7' and voice['release']=='v0.3.7'
     chat=next(p for p in manifest['plugins'] if p['name']=='dsh-deepseek-chat')
     assert chat['source'].startswith('file:./pinned-packages/')
     chatroot='profiles/desktop/node_modules/dsh-deepseek-chat/'

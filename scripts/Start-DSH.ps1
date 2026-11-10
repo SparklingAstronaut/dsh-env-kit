@@ -13,9 +13,10 @@ $logs = Join-Path $DshHome 'kit-logs'
 $null = New-Item -ItemType Directory -Path $logs -Force
 $stamp = [DateTime]::UtcNow.ToString('yyyyMMdd-HHmmss-fff')
 $saved = @{}
-foreach ($name in @('DSH_HOME','DSH_OFFICIAL_RUNTIME','ELECTRON_RUN_AS_NODE')) { $saved[$name] = [Environment]::GetEnvironmentVariable($name,'Process') }
+foreach ($name in @('DSH_HOME','DSH_GEMINI_VOICE_HOME','DSH_OFFICIAL_RUNTIME','ELECTRON_RUN_AS_NODE')) { $saved[$name] = [Environment]::GetEnvironmentVariable($name,'Process') }
 try {
     $env:DSH_HOME = $DshHome
+    $env:DSH_GEMINI_VOICE_HOME = Join-Path $DshHome 'gemini-voice'
     $env:DSH_OFFICIAL_RUNTIME = Join-Path $appRoot 'resources\app.asar\dsh'
     Remove-Item Env:ELECTRON_RUN_AS_NODE -ErrorAction SilentlyContinue
     $style = if ($Hidden) { 'Hidden' } else { 'Normal' }

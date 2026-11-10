@@ -1,3 +1,20 @@
+# 1.0.2 持久修复与插件操作验收
+
+环境：Windows x64，官方 DSH 0.2.2-rc.1，PowerShell 7，pnpm 11.28.5。日期：2026-11-11。
+
+- 语音正式包 0.3.7 使用官方图标槽位，标签仅为文字。源码构建与 30 项自动测试通过；套件直接使用独立 Release 的同一 `.tgz`，版本、提交和 SHA-256 登记在 manifest。
+- 14 个内置插件全部固定到相对路径安装包，188 个生产包、14,155 个负载文件通过哈希及敏感信息扫描。旧版 whale-girl 0.2.3 不能再按原版本号从 npm 获取，也由随包归档恢复。
+- 实际使用官方插件管理器在新 home 安装 dsh-prompt-history 1.11.2，结果 applied；原有 14 个插件仍启用且没有报告加载失败，均显示不可常规更新。语音设置栏目只显示一个 SVG 图标。
+- 将含新增插件的完整 home 复制恢复到另一条中文/空格路径，再通过官方插件管理器卸载 dsh-prompt-history，结果 applied。内置插件来源、内容、15 项界面与通知合同检查均通过，语音栏目仍只有一个图标。
+- 恢复测试发现并修复 pnpm 记住旧绝对路径导致的 ERR_PNPM_UNEXPECTED_VIRTUAL_STORE。恢复脚本仅移除两个机器相关状态文件，让下一次操作从便携安装记录重建；不删除插件、设置或安装包。
+- 自动回归实际执行新增/移除测试包、空目录冻结重装、移动已有依赖目录后再次新增/移除；并确认旧版语音来源及被覆盖的界面文件均会被拒绝。完整测试加入 GitHub Actions。
+- Ghost 无发光补丁随固定包保留。使用实际发布 client.js 中的 GhostOverlay 构造器在真实浏览器中显示测试文字，计算样式为 text-shadow: none；没有执行模型预测请求。
+- 新 home 的 Gemini 配置仍未配置，没有导入全局个人密钥。测试实例已停止。完整包安装会准备桌宠组件；本轮运行验收关闭了测试 home 的桌宠显示偏好。
+
+这些结果来自同一台机器上的隔离环境。未重新测试真实麦克风、付费转写、模型推理或账号登录。原有 CHAT 普通账号密码登录问题仍未解决；不要将本次导航/安装修复理解为该问题已修复。
+
+机器可读汇总：[persistent-fixes-verification.json](persistent-fixes-verification.json)。线上检查见 [GitHub Actions](https://github.com/SparklingAstronaut/dsh-env-kit/actions/workflows/verify.yml)。
+
 # 1.0.1 Google 登录修复与版本固定验收
 
 环境：Windows x64，官方 DSH 0.2.2-rc.1，PowerShell 7。日期：2026-11-11。

@@ -1917,10 +1917,10 @@
   },
   {
     "name": "dsh-gemini-voice",
-    "version": "0.3.4",
+    "version": "0.3.7",
     "path": "profiles/desktop/node_modules/dsh-gemini-voice",
     "license": "MIT",
-    "repository": null,
+    "repository": "https://github.com/SparklingAstronaut/dsh-gemini-voice",
     "licenseFiles": [
       "LICENSE"
     ]

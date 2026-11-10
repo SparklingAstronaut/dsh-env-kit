@@ -18,6 +18,7 @@ $parent=Split-Path $DshHome -Parent
 $null=New-Item -ItemType Directory -Path $parent -Force
 $stage=Join-Path $parent ((Split-Path $DshHome -Leaf)+'.staging-'+[guid]::NewGuid().ToString('N'))
 Copy-Item -LiteralPath $BackupPath -Destination $stage -Recurse
+Reset-PackageManagerState $stage
 Test-Payload $stage
 $marker=Read-Json (Join-Path $stage '.env-kit.json')
 $marker.dshExe=$DshExe
