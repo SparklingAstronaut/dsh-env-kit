@@ -1,11 +1,9 @@
 # DSH Environment Kit
 
-> [!WARNING]
-> **普通账号密码登录尚未修复（2026-11-11）**
+> [!NOTE]
+> **CHAT 已同步作者正式版 0.2.23（2026-11-11）**
 >
-> 本套件包含的 **dsh-deepseek-chat 0.2.22 修复候选**已收到问题反馈：普通账号密码登录提交后出现空白页面或错误。Google 登录并返回 DeepSeek 聊天已有实测确认，**不代表其他登录方式也正常**。
->
-> 普通账号密码登录的失败现场仍待复现，根因尚未确认；目前不能判断是原插件已有问题还是 Google 修复引入的回归。**请勿将“Google 登录修复”理解为所有登录方式均已修复。** 此说明适用于 1.0.1、1.0.2、1.0.3 标准包和完整离线包中的网页聊天插件。详见 [已知问题反馈](https://github.com/xingxingbk-git/dsh-deepseek-chat/pull/18#issuecomment-6772359887)。
+> 作者已吸收第三方登录页修复，并反馈真实邮箱密码登录测试正常。此前用户遇到的偶发空白/报错仍未复现、原因未确认；不能将作者的成功测试等同于每台电脑都已验证。详见 [作者说明](https://github.com/xingxingbk-git/dsh-deepseek-chat/pull/18#issuecomment-6786100622)。
 
 [![Verify portable kit](https://github.com/SparklingAstronaut/dsh-env-kit/actions/workflows/verify.yml/badge.svg)](https://github.com/SparklingAstronaut/dsh-env-kit/actions/workflows/verify.yml)
 
@@ -13,18 +11,20 @@
 
 适用：**Windows x64 · 官方 DSH 0.2.2-rc.1 · PowerShell 7**。套件不包含账号、密钥、聊天记录、模型或推理程序。
 
+**1.0.4 将网页聊天插件同步为作者正式发布的 0.2.23。** 使用 npm 原始安装包，不再携带此前 fork 的 0.2.22 候选；本机与套件使用同一归档并继续固定来源。其他 13 个插件和公开默认配置原样保留。详情见 [同步记录](docs/chat-upstream-0.2.23.md)。
+
 **1.0.3 补齐虚拟宠物设置图标修复，并把菜单回归检查扩展到语音、语音路由、电脑操控、本地模型和虚拟宠物。** 宠物插件的包、前端和后端版本统一为 1.1.7；其余 13 个插件复用已经校验的固定安装包，不改版本或来源；同时补齐 Doublecheck 的 Python 测试识别配置和默认工程规则。全部插件逐项核对记录见 [插件审计](docs/plugin-audit-1.0.3.md)。
 
 **1.0.2 修复语音栏目重复图标，固定猜字无发光补丁，并同步安装来源。** 语音使用正式发布的 0.3.7，源文件与独立发布包一致。全部 14 个内置插件保存为随包携带、带校验值的相对路径安装包，并附依赖锁定文件；新增、卸载其他插件时，包管理器可恢复原来的修复内容。新增插件后可启动及同版本换路径恢复。内置插件的来源、版本或文件发生漂移仍会被校验拒绝；常规自动更新不会替换这些固定包，升级内置插件需使用经过验证的新套件或主动迁移来源。
 
-1.0.1 新增 CHAT / HARNESS 网页聊天插件及 Google 登录修复，并固定为本地修复包。 等原作者发布包含 [PR #18](https://github.com/xingxingbk-git/dsh-deepseek-chat/pull/18) 的正式版本后，再手动切回官方安装来源。当前不会自动解除固定。已有 1.0.0/1.0.1 的用户请保留旧套件和备份，新版使用新数据目录；不要用新版恢复旧版本套件的备份。
+1.0.1–1.0.3 使用本地固定的 Google 登录修复候选；作者已吸收改动，1.0.4 转为正式 0.2.23 的原始 npm 归档。固定来源继续保留，避免其他插件操作改变当前验收版本。已有旧套件的用户请保留旧套件和备份，新版使用新数据目录；不要用新版恢复旧版本套件的备份。
 
 想让 AI 代劳？直接复制本页的 [AI 安装提示词](#ai-prompt)。
 
 <a id="install"></a>
 ## 1. 下载并准备
 
-**[点击下载完整离线包](https://github.com/SparklingAstronaut/dsh-env-kit/releases/download/v1.0.3/dsh-env-kit-1.0.3-offline-win-x64.zip)**
+**[点击下载完整离线包](https://github.com/SparklingAstronaut/dsh-env-kit/releases/download/v1.0.4/dsh-env-kit-1.0.4-offline-win-x64.zip)**
 
 整个解压，保留里面 `dsh-env-kit` 文件夹和 `electron-v45.1.0-win32-x64.zip` 的相对位置；Electron ZIP 不用手动解压。只需这个套件包，不用再下载标准包或 “Source code”。
 
@@ -161,7 +161,7 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File .\scripts\Restore-DSHKit.ps1 `
 | dsh-better-sidebar | 0.30.1 | 会话与工作区侧栏 |
 | dsh-context | 0.83.1 | 上下文洞察 |
 | dsh-computer-use-win | 0.5.5 | Windows 电脑操控 |
-| dsh-deepseek-chat | 0.2.22 修复候选（本地固定） | CHAT / HARNESS 切换、Google 登录；凭据由用户自行登录 |
+| dsh-deepseek-chat | 0.2.23 作者正式版（固定归档） | CHAT / HARNESS 切换、第三方登录；凭据由用户自行登录 |
 | dsh-doublecheck | 0.9.30 | 工程检查与验收记录 |
 | dsh-gemini-voice | 0.3.7 | Gemini 语音识别 |
 | dsh-voice-router | 0.1.2 | Gemini / 云端 API / 本地语音路由 |
@@ -182,8 +182,8 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File .\scripts\Restore-DSHKit.ps1 `
 <details>
 <summary>校验、回滚与其他下载方式（一般安装不需要看）</summary>
 
-- [Release 下载页](https://github.com/SparklingAstronaut/dsh-env-kit/releases/tag/v1.0.3) · [SHA-256 校验清单](https://github.com/SparklingAstronaut/dsh-env-kit/releases/download/v1.0.3/dsh-env-kit-1.0.3-SHA256SUMS.txt)。可用 `Get-FileHash .\dsh-env-kit-1.0.3-offline-win-x64.zip -Algorithm SHA256` 核对同名文件的值。
-- [标准包](https://github.com/SparklingAstronaut/dsh-env-kit/releases/download/v1.0.3/dsh-env-kit-1.0.3.zip) 不带 Electron；安装时省略 `-ElectronArchive` 会从官方源下载固定桌宠组件并校验。`-SkipDesktopPet` 可跳过桌面组件，但不属于完整桌宠恢复。
+- [Release 下载页](https://github.com/SparklingAstronaut/dsh-env-kit/releases/tag/v1.0.4) · [SHA-256 校验清单](https://github.com/SparklingAstronaut/dsh-env-kit/releases/download/v1.0.4/dsh-env-kit-1.0.4-SHA256SUMS.txt)。可用 `Get-FileHash .\dsh-env-kit-1.0.4-offline-win-x64.zip -Algorithm SHA256` 核对同名文件的值。
+- [标准包](https://github.com/SparklingAstronaut/dsh-env-kit/releases/download/v1.0.4/dsh-env-kit-1.0.4.zip) 不带 Electron；安装时省略 `-ElectronArchive` 会从官方源下载固定桌宠组件并校验。`-SkipDesktopPet` 可跳过桌面组件，但不属于完整桌宠恢复。
 - 重复安装同版本套件会校验文件并保留设置；插件文件被修改时会报错，不会悄悄覆盖。
 - 需要回滚时，关闭这个套件实例，再在套件文件夹运行：
 

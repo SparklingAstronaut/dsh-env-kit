@@ -12,4 +12,4 @@
 
 官方 DSH 软件不包含在此套件中；使用者需要另行安装并遵守其条款。模型权重、语音模型和本地推理引擎也不包含在套件中。
 
-新增的 dsh-deepseek-chat 来自 xingxingbk-git/dsh-deepseek-chat，Google 登录修复源码为 SparklingAstronaut/dsh-deepseek-chat 的提交 4ba6ade65efc851bd2607501956fd2836060596b。保留上游 README、仓库信息及预编译产物。上游该版本未声明 package.json license 字段，也未提供独立 LICENSE；third-party.json 如实标为 UNSPECIFIED，本套件 MIT 许可不授予该第三方组件的额外权利。其独立固定的 zod 4.6.6 保留 MIT LICENSE。
+dsh-deepseek-chat 来自 xingxingbk-git/dsh-deepseek-chat。自套件 1.0.4 起，使用作者正式发布的 0.2.23 原始 npm 归档；作者已吸收此前贡献的第三方登录修复，不再使用 fork 的 0.2.22 候选包。保留上游 README、仓库信息及预编译产物。上游该版本未声明 package.json license 字段，也未提供独立 LICENSE；third-party.json 如实标为 UNSPECIFIED，本套件 MIT 许可不授予该第三方组件的额外权利。其独立固定的 zod 4.6.6 保留 MIT LICENSE。

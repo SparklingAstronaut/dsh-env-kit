@@ -35,7 +35,7 @@ if args.electron_archive:
  offline=target.with_name('dsh-env-kit-'+manifest['version']+'-offline-win-x64.zip')
  guide='''# 完整离线安装（Windows x64）
 
-> **已知问题：普通账号密码登录尚未修复（2026-11-11）。** 套件中的网页聊天插件已收到提交账号密码后出现空白页面或错误的反馈，根因仍待确认。Google 登录已有成功实测，不能据此认定其他登录方式正常。详情见 `dsh-env-kit/README.md` 顶部提示；本包并非所有登录方式均已修复的版本。
+> **CHAT 已采用作者正式版 0.2.23。** 作者反馈邮箱密码登录实测正常；此前用户反馈的偶发空白或报错仍未复现、原因未确认。详情见 `dsh-env-kit/README.md`。
 
 先安装官方 DSH 0.2.2-rc.1 与 PowerShell 7。本包不含 DSH 主程序、模型、个人配置或密钥。
 把整个压缩包解压到同一个目录，保留 dsh-env-kit 文件夹与 electron-v45.1.0-win32-x64.zip 的相对位置。

@@ -57,6 +57,10 @@ with zipfile.ZipFile(archive) as z:
     assert voice['version']=='0.3.7' and voice['release']=='v0.3.7'
     chat=next(p for p in manifest['plugins'] if p['name']=='dsh-deepseek-chat')
     assert chat['source'].startswith('file:./pinned-packages/')
+    assert chat['version']=='0.2.23'
+    assert chat['repository']=='https://github.com/xingxingbk-git/dsh-deepseek-chat'
+    assert chat['tarball']=='https://registry.npmjs.org/dsh-deepseek-chat/-/dsh-deepseek-chat-0.2.23.tgz'
+    assert chat['sha256']=='5e2cd85cbacf86896d5fa165fe3ca71dec0eba1b9d94a9730ff0239765b5710b'
     chatroot='profiles/desktop/node_modules/dsh-deepseek-chat/'
     chatmeta=json.loads(z.read(chatroot+'package.json'))
     assert json.loads(z.read(chatroot+'node_modules/zod/package.json'))['version']==chatmeta['dependencies']['zod']
@@ -66,4 +70,4 @@ with zipfile.ZipFile(archive) as z:
     instructions=z.read('AGENTS.md').decode('utf-8-sig')
     assert all(name in instructions for name in ['using-superpowers','systematic-debugging','doublecheck_spec','verification-before-completion','doublecheck_report'])
 assert not failures,json.dumps(failures,ensure_ascii=False)
-print(json.dumps({'passed':True,'filesChecked':len(expected),'plugins':len(manifest['plugins']),'pinnedGoogleLogin':True,'secretAndPathFindings':0}))
+print(json.dumps({'passed':True,'filesChecked':len(expected),'plugins':len(manifest['plugins']),'pinnedUpstreamChat':'0.2.23','secretAndPathFindings':0}))
