@@ -1,4 +1,4 @@
-# 1.0.5 文字头像登录修复
+# 当前验证结果：1.0.5 已修复并实测通过
 
 2026-11-11：CHAT 使用基于作者 0.2.25 的 0.2.26 修复候选，PR #20 待作者处理。真实密码登录、聊天主页与历史显示、输入和清除草稿、CHAT/HARNESS 往返、刷新、完整退出重启恢复均已测试通过。最终重建包再次通过登录状态恢复和刷新。详见 [原因、来源与测试边界](chat-text-avatar-0.2.26.md)。
 
@@ -9,6 +9,9 @@
 - 设置图标、通知去重、猜字无发光及 Python 测试识别共 104 项检查通过。GitHub Actions 对发布提交重复执行公开负载、104 项检查及安装生命周期验证。
 
 未在第二台实体电脑验证，也未重测所有账号类型、第三方重新授权或真实消息生成。旧设置浏览器测试存在与作者基线相同的 10 项失败，已在 PR 和修复记录注明。以下保留各旧版本当时的结果。
+
+<details>
+<summary>历史版本验收记录（以顶部当前结果为准）</summary>
 
 # 1.0.4 同步作者 CHAT 正式版
 
@@ -35,7 +38,7 @@
 - Ghost 无发光补丁随固定包保留。使用实际发布 client.js 中的 GhostOverlay 构造器在真实浏览器中显示测试文字，计算样式为 text-shadow: none；没有执行模型预测请求。
 - 新 home 的 Gemini 配置仍未配置，没有导入全局个人密钥。测试实例已停止。完整包安装会准备桌宠组件；本轮运行验收关闭了测试 home 的桌宠显示偏好。
 
-这些结果来自同一台机器上的隔离环境。未重新测试真实麦克风、付费转写、模型推理或账号登录。原有 CHAT 普通账号密码登录问题仍未解决；不要将本次导航/安装修复理解为该问题已修复。
+这些结果来自同一台机器上的隔离环境。未重新测试真实麦克风、付费转写、模型推理或账号登录。该阶段尚未包含后续文字头像适配；套件 1.0.5 已完成对应修复与真实密码登录验证。
 
 机器可读汇总：[persistent-fixes-verification.json](persistent-fixes-verification.json)。线上检查见 [GitHub Actions](https://github.com/SparklingAstronaut/dsh-env-kit/actions/workflows/verify.yml)。
 
@@ -50,7 +53,7 @@
 - 复制恢复到第二个中文/空格目录后，14 个插件再次全部 active；固定来源自动解析至新 home 内的修复包，仍拒绝常规更新。测试实例均已停止。
 - 仅验证同一物理电脑上的隔离安装和路径变化。本次安装使用 SkipDesktopPet；没有重新执行真实 Google 登录、麦克风、付费云服务、本地模型或桌宠行为测试。此前本机 Google 登录已由用户完成并确认能聊天，不能据此替代另一台电脑的账号登录测试。
 
-固定的是 fork 提交 4ba6ade65efc851bd2607501956fd2836060596b 构建的 0.2.22 候选包，不是已发布的 npm 正式版。只有确认上游正式发行包含 [PR #18](https://github.com/xingxingbk-git/dsh-deepseek-chat/pull/18) 或等效修复后，才手动切回官方来源；没有自动监视或解除固定的任务。
+固定的是 fork 提交 4ba6ade65efc851bd2607501956fd2836060596b 构建的 0.2.22 候选包，不是已发布的 npm 正式版。该历史来源已在后续版本更新；当前套件的来源与实测结果见本页顶部和 manifest。
 
 机器可读证据：[google-login-pin-verification.json](google-login-pin-verification.json)。线上结果见 [GitHub Actions](https://github.com/SparklingAstronaut/dsh-env-kit/actions/workflows/verify.yml)。
 
@@ -84,3 +87,5 @@
 线上 CI 的最新结果见 [GitHub Actions](https://github.com/SparklingAstronaut/dsh-env-kit/actions/workflows/verify.yml)，与上述本地验收分开记录。验收会话没有 DSH 原生 doublecheck 工具，采用实际命令与测试结果记录，没有声称运行过原生 `/gate run`。
 
 机器可读汇总见 [verification-results.json](verification-results.json)。测试结束后隔离实例和模型服务均已停止；测试与恢复备份保留在私有工作目录，未放入发布包。
+
+</details>
