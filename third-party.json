@@ -2439,7 +2439,7 @@
   },
   {
     "name": "dsh-deepseek-chat",
-    "version": "0.2.23",
+    "version": "0.2.26",
     "path": "profiles/desktop/node_modules/dsh-deepseek-chat",
     "license": "UNSPECIFIED",
     "repository": {
@@ -2447,8 +2447,10 @@
       "url": "git+https://github.com/xingxingbk-git/dsh-deepseek-chat.git"
     },
     "licenseFiles": [],
-    "source": "https://registry.npmjs.org/dsh-deepseek-chat/-/dsh-deepseek-chat-0.2.23.tgz",
-    "sha256": "5e2cd85cbacf86896d5fa165fe3ca71dec0eba1b9d94a9730ff0239765b5710b"
+    "source": "https://github.com/SparklingAstronaut/dsh-deepseek-chat/commit/698bc413df292cec6cf1f881029ef539f31c1bde",
+    "sha256": "c280b61b8214437e9a44749c30ccd7cbd92cc9bc0c35d96f54650f84c15c7878",
+    "sourceCommit": "698bc413df292cec6cf1f881029ef539f31c1bde",
+    "releaseStatus": "tested-fix-candidate-not-upstream-release"
   },
   {
     "name": "zod",

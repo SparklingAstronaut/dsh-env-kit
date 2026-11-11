@@ -35,7 +35,7 @@ if args.electron_archive:
  offline=target.with_name('dsh-env-kit-'+manifest['version']+'-offline-win-x64.zip')
  guide='''# 完整离线安装（Windows x64）
 
-> **CHAT 已采用作者正式版 0.2.23。** 作者反馈邮箱密码登录实测正常；此前用户反馈的偶发空白或报错仍未复现、原因未确认。详情见 `dsh-env-kit/README.md`。
+> **CHAT 已修复文字头像账号密码登录后空白。** 当前为 0.2.26 修复候选（PR #20 待作者处理），已实际验证登录、切换、刷新和重启。详细来源及验证边界见 `dsh-env-kit/docs/chat-text-avatar-0.2.26.md`。
 
 先安装官方 DSH 0.2.2-rc.1 与 PowerShell 7。本包不含 DSH 主程序、模型、个人配置或密钥。
 把整个压缩包解压到同一个目录，保留 dsh-env-kit 文件夹与 electron-v45.1.0-win32-x64.zip 的相对位置。

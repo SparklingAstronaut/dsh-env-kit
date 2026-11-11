@@ -1,15 +1,17 @@
 # DSH Environment Kit
 
 > [!NOTE]
-> **CHAT 已同步作者正式版 0.2.23（2026-11-11）**
+> **1.0.5 修复普通密码登录后 CHAT 空白（2026-11-11）**
 >
-> 作者已吸收第三方登录页修复，并反馈真实邮箱密码登录测试正常。此前用户遇到的偶发空白/报错仍未复现、原因未确认；不能将作者的成功测试等同于每台电脑都已验证。详见 [作者说明](https://github.com/xingxingbk-git/dsh-deepseek-chat/pull/18#issuecomment-6786100622)。
+> 已复现并定位：部分账号使用文字头像，旧识别逻辑只接受图片头像，导致账号区识别失败、聊天页面被隐藏。现使用基于作者 0.2.25 的 **0.2.26 修复候选**，已完成真实密码登录、模式切换、刷新和退出重启验证。[PR #20](https://github.com/xingxingbk-git/dsh-deepseek-chat/pull/20) 已提交，尚待作者合并；这不是作者已发布的 npm 正式版。详见 [修复及实测记录](docs/chat-text-avatar-0.2.26.md)。
 
 [![Verify portable kit](https://github.com/SparklingAstronaut/dsh-env-kit/actions/workflows/verify.yml/badge.svg)](https://github.com/SparklingAstronaut/dsh-env-kit/actions/workflows/verify.yml)
 
 一次装好 14 个 DSH 插件，换电脑也能恢复。**下载、安装、密钥申请、本地模型和 AI 提示词都在本页，按顺序操作即可。**
 
 适用：**Windows x64 · 官方 DSH 0.2.2-rc.1 · PowerShell 7**。套件不包含账号、密钥、聊天记录、模型或推理程序。
+
+**1.0.5 同步文字头像登录修复。** 本机、标准包与离线包固定同一份带 SHA-256 文件名的 CHAT 安装归档，其余 13 个插件及公开默认配置保持不变。旧版本保留供回退。
 
 **1.0.4 将网页聊天插件同步为作者正式发布的 0.2.23。** 使用 npm 原始安装包，不再携带此前 fork 的 0.2.22 候选；本机与套件使用同一归档并继续固定来源。其他 13 个插件和公开默认配置原样保留。详情见 [同步记录](docs/chat-upstream-0.2.23.md)。
 
@@ -24,7 +26,7 @@
 <a id="install"></a>
 ## 1. 下载并准备
 
-**[点击下载完整离线包](https://github.com/SparklingAstronaut/dsh-env-kit/releases/download/v1.0.4/dsh-env-kit-1.0.4-offline-win-x64.zip)**
+**[点击下载完整离线包](https://github.com/SparklingAstronaut/dsh-env-kit/releases/download/v1.0.5/dsh-env-kit-1.0.5-offline-win-x64.zip)**
 
 整个解压，保留里面 `dsh-env-kit` 文件夹和 `electron-v45.1.0-win32-x64.zip` 的相对位置；Electron ZIP 不用手动解压。只需这个套件包，不用再下载标准包或 “Source code”。
 
@@ -161,7 +163,7 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File .\scripts\Restore-DSHKit.ps1 `
 | dsh-better-sidebar | 0.30.1 | 会话与工作区侧栏 |
 | dsh-context | 0.83.1 | 上下文洞察 |
 | dsh-computer-use-win | 0.5.5 | Windows 电脑操控 |
-| dsh-deepseek-chat | 0.2.23 作者正式版（固定归档） | CHAT / HARNESS 切换、第三方登录；凭据由用户自行登录 |
+| dsh-deepseek-chat | 0.2.26 修复候选（PR #20，固定归档） | 修复文字头像账号登录后空白；CHAT / HARNESS 切换；凭据由用户自行登录 |
 | dsh-doublecheck | 0.9.30 | 工程检查与验收记录 |
 | dsh-gemini-voice | 0.3.7 | Gemini 语音识别 |
 | dsh-voice-router | 0.1.2 | Gemini / 云端 API / 本地语音路由 |
@@ -182,8 +184,8 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File .\scripts\Restore-DSHKit.ps1 `
 <details>
 <summary>校验、回滚与其他下载方式（一般安装不需要看）</summary>
 
-- [Release 下载页](https://github.com/SparklingAstronaut/dsh-env-kit/releases/tag/v1.0.4) · [SHA-256 校验清单](https://github.com/SparklingAstronaut/dsh-env-kit/releases/download/v1.0.4/dsh-env-kit-1.0.4-SHA256SUMS.txt)。可用 `Get-FileHash .\dsh-env-kit-1.0.4-offline-win-x64.zip -Algorithm SHA256` 核对同名文件的值。
-- [标准包](https://github.com/SparklingAstronaut/dsh-env-kit/releases/download/v1.0.4/dsh-env-kit-1.0.4.zip) 不带 Electron；安装时省略 `-ElectronArchive` 会从官方源下载固定桌宠组件并校验。`-SkipDesktopPet` 可跳过桌面组件，但不属于完整桌宠恢复。
+- [Release 下载页](https://github.com/SparklingAstronaut/dsh-env-kit/releases/tag/v1.0.5) · [SHA-256 校验清单](https://github.com/SparklingAstronaut/dsh-env-kit/releases/download/v1.0.5/dsh-env-kit-1.0.5-SHA256SUMS.txt)。可用 `Get-FileHash .\dsh-env-kit-1.0.5-offline-win-x64.zip -Algorithm SHA256` 核对同名文件的值。
+- [标准包](https://github.com/SparklingAstronaut/dsh-env-kit/releases/download/v1.0.5/dsh-env-kit-1.0.5.zip) 不带 Electron；安装时省略 `-ElectronArchive` 会从官方源下载固定桌宠组件并校验。`-SkipDesktopPet` 可跳过桌面组件，但不属于完整桌宠恢复。
 - 重复安装同版本套件会校验文件并保留设置；插件文件被修改时会报错，不会悄悄覆盖。
 - 需要回滚时，关闭这个套件实例，再在套件文件夹运行：
 
