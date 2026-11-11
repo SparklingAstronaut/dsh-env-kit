@@ -1,11 +1,11 @@
 {
   "format": 1,
-  "version": "1.0.5",
+  "version": "1.1.0",
   "hostVersion": "0.2.2-rc.1",
   "platform": "win32-x64",
   "payload": {
     "file": "vendor/plugins-win-x64.zip",
-    "sha256": "1b4d5c34b8907fd9905ae713762d792bc526c449fa97106838e97497f52c21ed"
+    "sha256": "fdc79b73ce4c1d746f1cdbe45c4fa4779d076c2242f54e424e1c4731ffd35986"
   },
   "plugins": [
     {
@@ -97,8 +97,8 @@
     {
       "name": "dsh-whale-desktop-integration",
       "version": "1.1.7",
-      "source": "file:./pinned-packages/dsh-whale-desktop-integration-1.1.7-kit-1.0.3.tgz",
-      "sha256": "b84cd7107cf82f9fdb41f06e6dabba149bd002fc19a853859933c28ac13e8d83",
+      "source": "file:./pinned-packages/dsh-whale-desktop-integration-1.1.7-kit-1.1.0.tgz",
+      "sha256": "04710081fa2c72f09359cca57ddce3605b4bc8a78dd9e061933102ed5fa17eb4",
       "updatePolicy": "manual-versioned-archive",
       "baseVersion": "1.1.6",
       "patchSource": "docs/patches/whale-settings-icons.patch"

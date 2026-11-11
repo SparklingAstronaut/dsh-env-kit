@@ -16,6 +16,12 @@ jobs:
           version: '11.28.5'
       - name: Validate payload, secrets and paths
         run: python tests/audit.py
+      - name: Install into official-style homes (fresh, existing, repeat, undo)
+        shell: pwsh
+        run: ./tests/official-home-install.ps1
+      - name: Same install under Windows PowerShell 5.1
+        shell: powershell
+        run: ./tests/official-home-install.ps1
       - name: Extract isolated fixture
         shell: pwsh
         run: Expand-Archive -LiteralPath vendor/plugins-win-x64.zip -DestinationPath "$env:RUNNER_TEMP\kit-home"

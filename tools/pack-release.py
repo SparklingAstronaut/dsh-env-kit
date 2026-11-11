@@ -15,7 +15,7 @@ if args.electron_archive:
  if hashlib.sha256(args.electron_archive.read_bytes()).hexdigest()!=manifest['companion']['sha256']:
   raise SystemExit('Electron archive checksum mismatch; no release produced.')
 allowed={'README.md','LICENSE','manifest.json','payload-files.json','third-party.json','THIRD_PARTY_NOTICES.md',
-         'CHECKSUMS.sha256','.gitignore','.github','scripts','tests','tools','docs','vendor'}
+         'CHECKSUMS.sha256','.gitignore','Install.cmd','.github','scripts','tests','tools','docs','vendor'}
 unexpected={p.name for p in root.iterdir()}-allowed-{'.git'}
 if unexpected:raise SystemExit('Review unexpected root entries before packaging: '+repr(sorted(unexpected)))
 files=[p for p in sorted(root.rglob('*')) if p.is_file() and '.git' not in p.relative_to(root).parts]
@@ -33,26 +33,15 @@ print(json.dumps({'archive':target.name,'bytes':target.stat().st_size,'sha256':d
 release_files=[target]
 if args.electron_archive:
  offline=target.with_name('dsh-env-kit-'+manifest['version']+'-offline-win-x64.zip')
- guide='''# 完整离线安装（Windows x64）
+ guide='''# 安装（Windows x64）
 
-> **当前套件已修复密码登录问题，登录、切换、刷新和重启实测通过。** 按下方步骤安装即可；版本来源与验证记录见 `dsh-env-kit/README.md`。
+1. 安装官方 DeepSeek Harness 0.2.2-rc.1，打开一次，再完全退出（右下角托盘图标 → 退出）。
+2. 把这个压缩包整个解压，打开 dsh-env-kit 文件夹，双击 Install.cmd。
+3. 看到“安装完成”后，直接从 DeepSeek Harness 的官方图标打开。
 
-先安装官方 DSH 0.2.2-rc.1 与 PowerShell 7。本包不含 DSH 主程序、模型、个人配置或密钥。
-把整个压缩包解压到同一个目录，保留 dsh-env-kit 文件夹与 electron-v45.1.0-win32-x64.zip 的相对位置。
-在解压目录打开 PowerShell 7，进入 dsh-env-kit：
-
-```powershell
-cd .\\dsh-env-kit
-pwsh -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\Install-DSHKit.ps1 `
-  -DshExe 'C:\\Apps\\DSH\\DeepSeek Harness.exe' `
-  -DshHome 'C:\\DSH-kit-home' `
-  -ElectronArchive '..\\electron-v45.1.0-win32-x64.zip'
-pwsh -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\Start-DSH.ps1 `
-  -DshHome 'C:\\DSH-kit-home'
-```
-
-请把官方程序路径换成自己的安装位置，并为 DshHome 选择一个尚不存在的新目录。
-安装后在设置里填写自己的云端密钥或本地模型路径。完整说明、校验与回滚步骤见 dsh-env-kit/README.md。
+插件装进官方 DSH 自己的数据目录：只有一个软件、一个图标，不需要别的启动器。
+安装前会自动备份；已有的登录、聊天记录、设置和其他插件都保留。
+本包不含 DSH 主程序、模型、个人配置或密钥。密钥、本地模型和撤销方法见 dsh-env-kit/README.md。
 '''
  with zipfile.ZipFile(offline,'w',zipfile.ZIP_STORED) as archive:
   for p in files:archive.write(p,'dsh-env-kit/'+p.relative_to(root).as_posix())
